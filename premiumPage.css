@@ -58,7 +58,7 @@ body{
 /* introduction */
 
 #introduction{
-    margin: -29px;
+    margin: -29px 0px;
     background-color: #000000;
     color: #FFFFFF;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
@@ -108,14 +108,17 @@ body{
     width: 100%;
 }
 #power>div>div{
-    border: 1px solid ;
+    
     text-align: center;
     width: 80%;
     padding: 10px;
 }
 #power>div>div>img{
-    border: 1px solid ;
+    
     margin: 0px 71.5px 40px;
+    width: 40%;
+    margin: auto;
+    border-radius: 50%;
 }
 #power>div>div>p:nth-child(3){
     
@@ -149,14 +152,16 @@ body{
     width: 100%;
 }
 #connect>div>div{
-    border: 1px solid ;
+
     text-align: center;
-    width: 80%;
+    width: 70%;
     padding: 10px;
 }
 #connect>div>div>img{
-    border: 1px solid ;
-    margin: 0px 71.5px 40px;
+
+    margin: 0px 71.5px 10px 71.5px;
+    width: 60%;
+    margin: auto;
 }
 #connect>div>div>p:nth-child(3){
     
@@ -167,3 +172,84 @@ body{
     font-size: 20px;
 }
 
+
+
+
+#pickPremium{
+    text-align: center;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+    margin-bottom: 100px;
+
+}
+
+#pickPremium>h2{
+    font-size: 40px;
+}
+#pickPremium>div{
+    text-align: left;
+    display: flex;
+    width: 82%;
+    margin: auto;
+    
+    gap: 20px;
+}
+
+#pickPremium>div>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    padding: 16px;
+}
+#pickPremium>div>div>div{
+    border: 1px solid;
+    padding: 4px 8px;
+    width: fit-content;
+    font-size: 14px;
+    color: #2E77D0;
+    border-radius: 4px;
+    font-weight: 550;
+}
+
+.freeMonth{
+    background-color: #2E77D0;
+    color: white !important;
+    margin-bottom:10px ;
+    
+    
+}
+
+#pickPremium>div>div>h3{
+    font-size: 24px;
+    line-height: 1px;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+
+}
+#pickPremium>div>div>p{
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    line-height: 16px;
+    
+}
+
+#pickPremium>div>div>button{
+    width: 100%;
+    padding: 14px 32px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: 550;
+    border-radius: 30px;
+    margin-bottom: 16px;
+}
+#pickPremium>div>div>button:hover{
+    cursor: pointer;
+    font-size: 14.7px;
+}
+#pickPremium>div>div>a{
+    font-size: 12px;
+    text-decoration: none;
+    text-decoration: underline;
+    color: #000000;
+    margin-top:  16px;
+
+}
+   
