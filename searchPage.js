@@ -18,7 +18,7 @@ async function fetchData(inputData){
 
     try {
         
-        const authToken= "BQCiN3WD3ZA1AuqdMlCEiP4KUB8OabzKw-cTnhMvprcz_KoCE4Shg7brx-txVl28FgEWjLII1pqq1a3k2SaFgz81jNuumYzoEfscrNSNkkeYnAT1jTJKEEX_Mb5Zn95L2b_gK7bSokEkw3xavk1Lc_jdDgmglt6XgUM"
+        const authToken= "BQBuWnL-mLNxj3lpvYv-piGe3iQZNWhLRvtszBzPagYgiz8WSSWeqgc7WXD6TGlfK5EgPAxPPXfhkwoWcbs4pRNYuie1ayrmn9qjweRojQ7QKo3egVC9KvdxJxmLbVdoiOS9E-dUwTEBqyZvpSdHHi97Ar5g7xyuxFA"
 
         let res= await fetch(`https://api.spotify.com/v1/search?q=${inputData}&type=track,artist,album,playlist,episode%2Cartist&market=IN&limit=6&offset=5`,{
         method:"GET",
@@ -46,6 +46,8 @@ async function fetchData(inputData){
         
         console.log(tracks.items[0])
         displayTopResult(tracks.items[0])
+
+        displaySong(tracks.items)
         // displayTracks(tracks.items)
 
     } catch (error) {
@@ -165,6 +167,8 @@ function displayEpisodes(episodes){
 }
 
 function  displayTopResult(track){
+    document.querySelector("#topResult").innerHTML="";
+
     let { album:{name},album:{images},artists }=track;
 
     let box= document.createElement("div");
@@ -180,13 +184,58 @@ function  displayTopResult(track){
     artists.forEach(artist=>{
         info=info+artist.name+","
     })
-    infoElement.textContent= `${info.slice(0,-1)}   ${track.type.toUpperCase()}`;
+    const space=""
+    infoElement.textContent= info.slice(0,-1)+"   "  +track.type.toUpperCase();
    
     box.append(imageElement,nameElement,infoElement);
 
     document.querySelector("#topResult").append(box);
-    console.log(artists)
-    // info.textContent=
+    
+    
 }
 
+function displaySong(tracks){
+    console.log(tracks)
+    document.querySelector("#songs").innerHTML="";
+    let count=0;
+    tracks.forEach(track => {
+        
+        let mainBox= document.createElement("div")
 
+        let imgBox= document.createElement("div");
+
+        let image=document.createElement("img");
+        image.src=track.album.images[0].url;
+
+        imgBox.append(image);
+
+
+        let name=document.createElement("h3")
+        name.textContent=track.name;
+
+        let infoBox= document.createElement("div");
+
+        let infoElement=document.createElement("p");
+        let info=""
+        track.artists.forEach(artist=>{
+            info=info+artist.name+","
+        })
+       
+        infoElement.textContent= info.slice(0,-1);
+
+        infoBox.append(name,infoElement);
+
+        let timeBox=document.createElement("div");
+        timeBox.textContent=(track.duration_ms/60000).toFixed(2).toString().replace(".",":")  ;
+        console.log(track.duration_ms)
+        mainBox.append(imgBox,infoBox,timeBox)
+
+        count++;
+        
+        if(count<=4)
+        {
+            document.querySelector("#songs").append(mainBox)
+            // break;
+        }
+    });
+}
