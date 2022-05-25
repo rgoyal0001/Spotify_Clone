@@ -18,7 +18,7 @@ async function fetchData(inputData){
 
     try {
         
-        const authToken= "BQBuWnL-mLNxj3lpvYv-piGe3iQZNWhLRvtszBzPagYgiz8WSSWeqgc7WXD6TGlfK5EgPAxPPXfhkwoWcbs4pRNYuie1ayrmn9qjweRojQ7QKo3egVC9KvdxJxmLbVdoiOS9E-dUwTEBqyZvpSdHHi97Ar5g7xyuxFA"
+        const authToken= "BQD0_CPssYym8dxZr8SCN9_IIm31mlL9SODxnuxZBGgKlzRxUKGp6e6kUSBlxGz1XnZ-lU6eTd92PfWN3zwl4XFlSIADFa80dbBtJ9zZdRG6gMhcPFyBowNxx3oM_LX_mTfgEdUWJYmOX9m1JNfcfrvcWdFB4BjRjrI"
 
         let res= await fetch(`https://api.spotify.com/v1/search?q=${inputData}&type=track,artist,album,playlist,episode%2Cartist&market=IN&limit=6&offset=5`,{
         method:"GET",

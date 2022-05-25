@@ -157,6 +157,10 @@ body{
 
 #artists>div>h3,#albums>div>h3,#playlists>div>h3,#episodes>div>h3{
     font-size: 16px;
+    overflow: hidden;
+    box-sizing: content-box;
+    max-lines: 1;
+
     margin-left: 13px;
     margin-bottom: -10px;
     line-height: 1.5rem;
@@ -170,6 +174,5 @@ body{
     color: #b3b3b3;
     font-weight: 500;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
-
 }
 
