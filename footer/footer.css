@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#footer_cont{
+    background-color: black;
+    height: 450px;
+    /* border: 1px solid rebeccapurple; */
+}
+#footer_upper{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid rebeccapurple; */
+}
+#footer_img{
+    margin:50px 80px;
+    cursor: pointer;
+}
+.foter_data {
+    color: white;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.fooeter_heading{
+    color: #615b5b;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.foter_data:hover{
+    color: rgb(32, 170, 32);
+}
+.footer_data_row{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#footer_data_all{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    margin:70px 10px;
+}
+#footer_social{
+    border: 1px solid white;
+    height: 70px;
+    width: 15%;
+    margin-top:70px;
+    margin-left: 250px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+.footer_social_png{
+    display: flex;
+    background-color: #615b5b;
+    height: 60px;
+    width: 30%;
+    border-radius: 50px;
+   align-items: center;
+   justify-content: center;
+}
+.footer_social_png img{
+    height: 40px;
+    width: 40px;
+    /* ba\ckground-color: ; */
+}
+#footer_right{
+    margin-left: 90px;
+    /* padding: 20px; */
+}
+.footer_right_class{
+    color: rgb(65, 62, 62);
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+margin: 0px 8px;
+
+    /* gap: 190px; */
+}
+.footer_right_class:hover{
+    color: rgb(32, 170, 32);
+}
+#footer_lower{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer_left{
+    margin-right: 70px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    height: 40px;
+    color: #554d4d;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+#footer_left p{
+    margin-left: 12px;
+}
+
