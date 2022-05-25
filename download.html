@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .check-img {
+            position: absolute;
+            width: 8%;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: 0.3s ease 0.9s 1 normal forwards running dWurqy;
+        }
+
+        #container {
+            font-family: spotify-circular, Helvetica, Arial, sans-serif;
+        }
+
+        #upper-container {
+            min-height: 450px;
+            background-color: rgb(25, 230, 140);
+            padding-left: 35%;
+            padding-top: 6%;
+        }
+
+        #computer-icon {
+            margin-bottom: 3%;
+        }
+
+        #computer-logo {
+            height: 80px;
+            margin-left: 13%;
+        }
+
+        #upper-container>h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 3%;
+        }
+
+        #upper-container>h2 {
+            font-size: 17px;
+            /* text-align: center; */
+            font-weight: 600;
+            margin-bottom: 3%;
+        }
+
+        #downloadButton {
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-left: 13%;
+            border: none;
+        }
+
+        #middile-container {
+            padding-left: 30%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+
+        }
+
+        #middile-container>h1,
+        #middile-container>p {
+            padding-bottom: 3%;
+            font-weight: 700;
+        }
+
+        #icon-img {
+            display: flex;
+            gap: 15px;
+        }
+
+        #icon-img>img {
+            height: 40px;
+            padding-top: 10px;
+        }
+
+        #middile-container>p,
+        #icon-img {
+            padding-left: 10%;
+        }
+
+        #lower-container {
+            background-color: rgb(34, 35, 38);
+            color: white;
+            min-height: 450px;
+        }
+
+        #elements {
+            padding-top: 5%;
+            padding-left: 20%;
+        }
+
+        #elements>img {
+            width: 450px;
+            padding-left: 20%;
+        }
+
+        #elements>h1 {
+            padding-left: 20%;
+        }
+
+        #elements>div,
+        #elements>h1 {
+            padding-top: 3%;
+        }
+
+        #option-bar>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        ul {
+            list-style: none;
+            /* Remove default bullets */
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: green;
+            font-weight: 1000;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="upper-container">
+            <div id="computer-icon">
+                <img id="computer-logo" src="https://www-growth.scdn.co/static/download/laptop.svg" alt="">
+                <!-- <img class="" src="https://www-growth.scdn.co/static/download/green-circle.svg" alt="">
+                <img class="check-img" src="https://www-growth.scdn.co/static/download/green-success-check.svg" alt=""> -->
+            </div>
+            <h1>Download Spotify</h1>
+            <h2>Play millions of songs and podcasts on your device.</h2>
+            <button id="downloadButton">Download</button>
+        </div>
+        <div id="middile-container">
+            <h1>Bring your music to mobile and tablet, too.</h1>
+            <p>Listening on your phone or tablet is free, easy, and fun.</p>
+            <div id="icon-img">
+                <img src="https://www-growth.scdn.co/static/badges/svgs/apple/badge-en.svg" alt="">
+                <img src="https://www-growth.scdn.co/static/badges/svgs/google/badge-en.svg" alt=""
+                    style="height: 60px; padding: 0;">
+                <img src="https://www-growth.scdn.co/static/badges/microsoft-windows/en.png" alt="">
+
+            </div>
+        </div>
+        <div id="lower-container">
+            <div id="elements">
+                <img src="https://www-growth.scdn.co/static/download/all-devices.svg" alt="">
+                <h1>One account, listen everywhere.</h1>
+                <div id="option-bar">
+                    <ul>
+                        <li>MOBILE</li>
+                        <li>COMPUTER</li>
+                        <li>TABLET</li>
+                        <li>CAR</li>
+                        <li>PLAYSTATION</li>
+                        <li>XBOX</li>
+                        <li>TV</li>
+                        <li>SPEAKER</li>
+                        <li>WEB PLAYER</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

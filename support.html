@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: spotify-circular, Helvetica, Arial, sans-serif;
+        }
+        #upper-container{
+            min-height: 450px;
+            background-image: url(https://support.scdn.co/web/_next/static/assets/4ead0c2/search-desktop.webp);
+            color: white;
+        }
+        #upper-container > h1{
+            padding: 5% 0 0 30%;
+            font-size: 60px;
+            word-spacing: -7px;
+        }
+        #upper-container > input{
+            margin: 3% 0 0 25%;
+            padding: 15px;
+            width: 50%;
+            font-size: 15px;
+        }
+        #option-box{
+            display: flex;
+            margin: 3% 0 0 20%;
+        }
+        .option{
+            height: 78px;
+            width: 248px;
+        }
+        .option > h3{
+            text-align: center;
+            font-weight: 400;
+            color: #b7b7b7;
+            font-size: 15px;
+        }
+        .option > p{
+            text-align: center;
+            margin: 5%;
+            font-weight: 500;
+        }
+        #middile-container{
+            min-height: 600px;
+            background-color: #eee;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 3% 20%;
+        }
+        .contentbox > h3{
+            font-size: 24px;
+            margin: 0 0 13%;
+        }
+        .contentbox li{
+            color: green;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 5% 0;
+            list-style: none;
+        }
+        #lower-container{
+            min-height: 200px;
+            padding: 5% 35%;
+        }
+        #lower-container > h1{
+            font-size: 45px;
+            margin-bottom: 6%;
+        }
+        #lower-container > p{
+            text-align: center;
+            font-weight: 700;
+            line-height: 25px;
+        }
+        #lower-container > button{
+            margin: 5% 35%;
+            height: 50px;
+            width: 150px;
+            background-color: #1fdf64;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="upper-container">
+            <h1>How can we help you?</h1>
+            <input type="text" placeholder="Search">
+            <div id="option-box">
+                <div class="option">
+                    <h3>Logging In</h3>
+                    <p>Can't reset password</p>
+                </div>
+                <div class="option">
+                    <h3>Troubleshooting</h3>
+                    <p>My account doesn't look right</p>
+                </div>
+                <div class="option">
+                    <h3>Logging In</h3>
+                    <p>Can't remember login details</p>
+                </div>
+                <div class="option">
+                    <h3>Logging In</h3>
+                    <p>Facebook login help</p>
+                </div>
+            </div>
+        </div>
+        <div id="middile-container">
+            <div class="contentbox">
+                <h3>Payment Help</h3>
+                <ul>
+                    <li>Manage payments</li>
+                    <li>Payment methods</li>
+                    <li>Charge help</li>
+                </ul>
+            </div>
+            <div class="contentbox">
+                <h3>Plan Help</h3>
+                <ul>
+                    <li>Available plans</li>
+                    <li>Plan settings</li>
+                    <li>Premium Family & Kids</li>
+                </ul>
+            </div>
+            <div class="contentbox">
+                <h3>App Help</h3>
+                <ul>
+                    <li>Getting started</li>
+                    <li>App settings</li>
+                    <li>Troubleshooting</li>
+                </ul>
+            </div>
+            <div class="contentbox">
+                <h3>Device Help</h3>
+                <ul>
+                    <li>Smart watches</li>
+                    <li>TVs</li>
+                    <li>Gaming</li>
+                </ul>
+            </div>
+            <div class="contentbox">
+                <h3>Data & Privacy</h3>
+                <ul>
+                    <li>Data and privacy info</li>
+                </ul>
+            </div>
+            <div class="contentbox">
+                <h3>Account Help</h3>
+                <ul>
+                    <li>Logging In</li>
+                    <li>Profile Help</li>
+                    <li>Account settings</li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-container">
+            <h1>Visit the Community</h1>
+            <p>Have questions? Find answers from our worldwide Community of expert fans!</p>
+            <button>Find Answers</button>
+        </div>
+    </div>
+</body>
+</html>
