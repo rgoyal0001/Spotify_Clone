@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #upper-container {
+            font-weight: 700;
+            font-family: spotify-circular, Helvetica, Arial, sans-serif;
+            /* background-position: 46% 4%; */
+            justify-content: center;
+            min-height: 575px;
+            background-color: #ffcdd2;
+        }
+
+        #tittle {
+            font-size: 40px;
+            /* margin-left: 25%; */
+            margin-bottom: 3%;
+            /* margin-top: 15%; */
+            width: 800px;
+            text-indent: -3.3em;
+            transform: translate(125px, 0px)
+        }
+
+        #tittle>h1 {
+            color: #D83519;
+            padding-top: 20%;
+        }
+
+        #content > p {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 24px;
+            padding-bottom: 40px;
+            color: #D83519;
+        }
+
+        #button {
+            width: 100%;
+            /* border: none; */
+            /* align-items: center; */
+        }
+
+        #button>button {
+            margin-left: 40%;
+            height: 50px;
+            width: 200px;
+            border-radius: 100px;
+            background-color: #D83519;
+            font-weight: 700;
+        }
+
+        #button>button>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #lower-container {
+            font-weight: 700;
+            font-family: spotify-circular, Helvetica, Arial, sans-serif;
+            min-height: 600px;
+            background-color: rgb(41, 65, 171);
+            background-image: url(https://content-tooling.spotifycdn.com/images/b236bf87-bfd5-4bcb-b51a-77881073039c_lie_circles.svg);
+            background-position: 100% 4%;
+            background-repeat: no-repeat;
+            color: #1ed760;
+        }
+        #lower-tittle{
+            font-size: 28px;
+            margin-left: 10%;
+            padding-top: 8%;
+        }
+        #lower-container > h2{
+            margin-left: 10%;
+            padding-top: 3%;
+            margin-bottom: 4%;
+            font-weight: 500;
+            font-size: 22px;
+        }
+        #openWebPlayer{
+            margin-left: 10%;
+            background-color: #1ed760;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(41, 65, 171);
+            padding: 15px 30px;
+            border-radius: 50px;
+        }
+        button {
+            border: none;
+        }
+        #content{
+            margin-left: 20%;
+            margin-right: 20%;
+            /* background-color: #1ed760; */
+        }
+        @media (min-width: 451px) and (max-width: 820px){
+            #container{
+                width: 100vh;
+            }
+            #upper-container{
+                height: 85vh;
+            }
+            #tittle > h1{
+                padding: 20% 0 0 0;
+                font-size: 110px;
+                text-align: center;
+            }
+            #content{
+                /* margin-left: 15%;
+                
+                margin-right: 15%; */
+                margin: 0 8%;
+                padding-top: 12%;
+            }
+            #button > button, #lower-content button{
+                margin-top: 3%;
+                margin-left: 36%;
+                height: 75px;
+                width: 250px;
+                font-size: 18px;
+
+            }
+            #lower-tittle{
+                margin: 0 ;
+            }
+            #lower-content{
+                margin: 0 22vh;
+                padding-top: 100px;
+            }
+            #lower-content h1{
+                margin: 0;
+                font-size: 70px;
+            }
+            #lower-content h2{
+                margin: 10% 0;
+                text-align: center;
+                font-size: 30px;
+
+            }
+            #lower-content button{
+                margin: 0 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    <div id="upper-container">
+        <div id="content">
+        <div id="tittle">
+            <h1>Go Premium. Be Happy.</h1>
+        </div>
+        <div id="button">
+            <button><a href="">START FREE TRIAL </a></button>
+        </div>
+        <p>* Terms and conditions apply. Open only to users who haven't already tried Premium.</p>
+    </div>
+</div>
+    <div id="lower-container">
+        <div id="lower-content">
+        <div id="lower-tittle">
+            <h1>Looking for music?</h1>
+        </div>
+        <h2>Start listening to the best new releases.</h2>
+        <button id="openWebPlayer">OPEN WEB PLAYER</button>
+    </div>
+    </div>
+</div>
+</body>
+
+</html>
