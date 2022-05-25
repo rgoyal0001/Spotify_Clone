@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            font-weight: 700;
+            font-family: spotify-circular, Helvetica, Arial, sans-serif;
+            background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+            background-size: 175%;
+            background-position: 46% 4%;
+            /* -webkit-box-pack: center; */
+            justify-content: center;
+            min-height: 846px;
+            background-color: rgb(62, 62, 191);
+        }
+
+        #tittle {
+            font-size: 75px;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 3%;
+            /* margin-top: 10%; */
+            /* background-color: aliceblue; */
+            /* margin-top: 15%; */
+            width: 800px;
+            text-indent: -3.3em;
+            transform: translate(125px, 0px)
+        }
+
+        #tittle>h1 {
+            color: rgb(74, 204, 74);
+            padding-top: 20%;
+            /* margin-top: 10%; */
+        }
+
+        /* #container>p  */
+        #para {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 40px;
+            color: rgb(74, 204, 74);
+        }
+
+        #button {
+            width: 100%;
+            /* align-items: center; */
+        }
+
+        #button>button {
+            margin-left: 45%;
+            height: 50px;
+            width: 200px;
+            border-radius: 100px;
+            background-color: rgb(74, 204, 74);
+            font-weight: 700;
+            border: none;
+        }
+
+        #button>button>a {
+            text-decoration: none;
+            color: rgb(62, 62, 191);
+        }
+
+        @media (min-width: 451px) and (max-width: 820px) {
+            #container {
+                width: 100%;
+                background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+                background-position: 94% -29%;
+                background-size: 253%;
+                height: 100vh;
+                padding-left: 0;
+                padding-right: 10%;
+            }
+
+            #tittle {
+
+                font-size: 50px;
+                margin-left: 0vh;
+                margin-bottom: 3%;
+                /* margin-top: 10%; */
+                /* background-color: aliceblue; */
+                /* margin-top: 15%; */
+                width: 83%;
+                text-indent: -0.3em;
+                transform: translate(125px, 0px);
+                padding-top: 13%;
+                word-spacing: 3px;
+            }
+
+            /* #container>p  */
+            /* #para {
+                /* margin: ;
+            } */
+
+            #button>button {
+                margin-left: 36%;
+            }
+        }
+
+        @media (min-width: 50px) and (max-width: 450px) {
+            #container {
+                background-position: 94% -29%;
+                background-size: 253%;
+            }
+
+            #tittle {
+
+                font-size: 25px;
+                margin-left: -4vh;
+                margin-bottom: 3%;
+                /* margin-top: 10%; */
+                /* background-color: aliceblue; */
+                /* margin-top: 15%; */
+                width: 80%;
+                text-indent: -0.3em;
+                transform: translate(125px, 0px);
+                padding-top: 13%;
+                word-spacing: 3px;
+            }
+
+            /* #container > p */
+            #para>p {
+                font-size: 14px;
+                /* margin: 0 10%; */
+                padding-left: 10%;
+            }
+
+            #para>p {
+
+                padding: 0 10%;
+            }
+
+            #button>button {
+                margin-left: 30%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="tittle">
+            <h1>Listening is everything</h1>
+        </div>
+        <div id="para">
+
+            <p>Millio◘ns of songs and podcasts. No credit card needed.</p>
+        </div>
+        <div id="button">
+            <button><a href=""> GET SPOTIFY FREE </a></button>
+        </div>
+
+    </div>
+</body>
+
+</html>
