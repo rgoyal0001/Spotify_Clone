@@ -1,0 +1,178 @@
+body{
+    margin-left: 16%;
+    color: white;
+    background-color: black;
+}
+#inputSearch{
+    padding: 8px 78px 8px 30px;
+    border-radius: 30px;
+    border-color: none;
+    margin: 0%;
+}
+
+#topResultElement{
+    display: flex;
+    gap: 40px;
+}
+#topResultElement>div:nth-child(1){
+    width: 40%;
+    
+}
+#topResultElement>div:nth-child(2){
+    width: 55%;
+    
+}
+#topResult>div{
+    padding: 0px 32px;
+    background-color: #232323;
+    padding: 20px 0px 10px 20px;
+    border-radius: 7px;
+}
+#topResult>div>img{
+    width: 25%;
+    border-radius: 8px;
+}
+#topResult>div>h1{
+    font-size: 32px;
+    margin-bottom: -7px;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+#topResult>div>p{
+    font-size: 14px;
+    color: #b3b3b3;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+#songs{
+    display: flex;
+    flex-direction: column;
+    /* width: 140%; */
+    
+}
+
+#songs>div{
+    display: flex;
+    margin-top: 5px;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* padding: 0px 16px; */
+}
+#songs>div>div{
+    padding: 2px;
+}
+
+#songs>div>div:nth-child(1){
+    width: 10%;
+}
+#songs>div>div:nth-child(2){
+    width: 90%;
+}
+#songs>div>div:nth-child(3){
+    font-size: 14px;
+    
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+
+}
+
+
+
+#songs img{
+    width: 2.5rem;
+    margin-top: 5px;
+    margin-left: 5px;
+    
+    /* display: block; */
+}
+
+#songs h3{
+    font-size: 15px;
+    /* color: red; */
+    color: white;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    /* margin-left: 5px; */
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+#songs p{
+    font-size: 13px;
+    /* margin-left: 5px; */
+    margin-bottom: 0px;
+    color: #b3b3b3;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+
+
+.headElement{
+    font-size: 24px;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+
+}
+
+
+#artists,#albums,#playlists,#episodes{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    text-overflow:ellipsis;
+    /* overflow: hidden; */
+    
+}
+
+#artists>div,#albums>div,#playlists>div,#episodes>div{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    overflow: hidden;
+    height: fit-content;
+    border-radius: 7px;
+
+}
+
+#artists>div:hover,#albums>div:hover,#playlists>div:hover,#episodes>div:hover{
+
+    cursor: pointer;
+    background-color: #232323;
+
+}
+#albums>div>img,#playlists>div>img,#episodes>div>img{
+    /* margin-top: 10px; */
+    width: 8.5em;
+    margin: auto;
+    height: 8.5em;
+    border-radius: 8px;
+    
+}
+#artists>div>img{
+    width: 8.5em;
+    padding-top: 7px;
+    height: 8.5em;
+    margin: auto;
+    /* border-radius: 8px; */
+    border-radius: 50%;
+}
+
+
+#artists>div>h3,#albums>div>h3,#playlists>div>h3,#episodes>div>h3{
+    font-size: 16px;
+    overflow: hidden;
+    box-sizing: content-box;
+    max-lines: 1;
+
+    margin-left: 13px;
+    margin-bottom: -10px;
+    line-height: 1.5rem;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+
+#artists>div>p,#albums>div>p,#playlists>div>p,#episodes>div>p{
+    font-size: 14px;
+    margin-left: 13px;
+    color: #b3b3b3;
+    font-weight: 500;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+

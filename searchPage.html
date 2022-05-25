@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Search</title>
+    <link rel="stylesheet" href="./searchPage.css">
+</head>
+<body>
+    
+    <input oninput="debounce(fetchData,2000)" type="text" placeholder="Artists, songs,or podcasts" id="inputSearch">
+
+    <div id="topResultElement">
+        <div>
+            <h2 class="headElement">Top Results</h2>
+            <div id="topResult">
+
+            </div>
+        </div>
+
+        <div>
+            <h2 class="headElement">Songs</h2>
+            <div id="songs">
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+    <h2 class="headElement">Artists</h2>
+    <div id="artists" > 
+
+    </div>
+
+    <h2 class="headElement">Albums</h2>
+    <div id="albums">
+
+    </div>
+
+    <h2 class="headElement">Playlists</h2>
+    <div id="playlists">
+
+    </div>
+
+    <h2 class="headElement">Episode</h2>
+    <div id="episodes">
+
+    </div>
+</body>
+</html>
+<script src="./searchPage.js"></script>
