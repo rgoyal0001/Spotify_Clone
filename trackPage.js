@@ -20,11 +20,13 @@ async function fetchTrackData(){
 
         let data= await res.json();
         
-        console.log(data)
+       
         const albumInfo=JSON.parse(localStorage.getItem("albumInfo"));
         displayAlbumInfo(albumInfo)
 
         displayTrackData(data.items);
+
+        fetchSuggestion(data.items[0]);
 
     } catch (error) {
         console.log(error);
@@ -38,6 +40,7 @@ fetchTrackData()
 function displayTrackData(tracks){
 
     tracks.forEach(track => {
+
         
         let mainBox= document.createElement("div")
 
@@ -75,9 +78,73 @@ function displayTrackData(tracks){
 
 }
 
+async function fetchSuggestion(trackData){
+    
 
+    try {
+        const authToken= localStorage.getItem("authToken")
+        let inputData=trackData.name;
+      
+        let res= await fetch(`https://api.spotify.com/v1/search?q=${inputData}&type=track%2Cartist&market=IN&limit=20&offset=5`,{
+        method:"GET",
+        headers:{
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${authToken}`,
+        }
+        
+        })
+
+        let data= await res.json();
+        // console.log(data.tracks.items);
+        displaySuggestion(data.tracks.items);
+
+      
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function displaySuggestion(tracks){
+
+    document.querySelector("#recommendedSongs").innerHTML=""
+    console.log(tracks)
+    tracks.forEach(track => {
+
+    let mainBox= document.createElement("div")
+
+    let imgBox= document.createElement("div");
+
+    let image=document.createElement("img");
+    image.src=track.album.images[0].url;
+
+    imgBox.append(image);
+
+
+    let name=document.createElement("h3")
+    name.textContent=track.name;
+
+    let infoBox= document.createElement("div");
+
+    let infoElement=document.createElement("p");
+    let info=""
+    track.artists.forEach(artist=>{
+        info=info+artist.name+","
+    })
+   
+    infoElement.textContent= info.slice(0,-1);
+
+    infoBox.append(name,infoElement);
+
+    let timeBox=document.createElement("div");
+    timeBox.textContent=(track.duration_ms/60000).toFixed(2).toString().replace(".",":")  ;
+    mainBox.append(imgBox,infoBox,timeBox)
+    document.querySelector("#recommendedSongs").append(mainBox);
+
+  });
+}
 function displayAlbumInfo(album){
-    console.log(album);
+   
 
     let imgBox= document.createElement("div");
 

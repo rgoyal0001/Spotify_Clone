@@ -1,5 +1,5 @@
 
-localStorage.setItem("authToken","BQCu424yGzCw19CXaVd2ejIU5eAMf8an0bL7MbmRMzN0byIhE1GYKhS5Latl2v99eoA3AOTNwWHa1nZpXLvE9OeApQgX0N19-4vqPOii5mJ_r9XB7Ae2UfEjAWjjUjLyHmgOq6cWDwkgqiuQpIJkxAngXj2nOgpOlRY")
+localStorage.setItem("authToken","BQBZsvvou38Yr4Cn-mh29civRW-HaE39U561F5TEKGoN8QzGhq0D4mOdNXZ76Bp3kptTUWo5d1GN2ONejzTyb9Wy0-MV-c7TQlDy7U1Vrxbc3-1D_LdLbnxuQV709hKSE9SUr9kD9FvYRRpcGkbKXC74UbWiz7HIEzs")
 
 let timerId;
 function debounce(fetchData,delay)
@@ -71,13 +71,17 @@ function displayArtists(artists){
         let image=document.createElement("img");
         image.src=artist.images[0].url;
 
+        let nameDiv=document.createElement("div");
+
+
         let name=document.createElement("h3")
         name.textContent=artist.name;
+        nameDiv.append(name)
 
         let type=document.createElement("p")
         type.textContent=artist.type.charAt(0).toUpperCase() + artist.type.slice(1);
 
-        box.append(image,name,type);
+        box.append(image,nameDiv,type);
 
         document.querySelector("#artists").append(box)
     });
