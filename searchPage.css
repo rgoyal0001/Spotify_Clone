@@ -134,7 +134,7 @@ body{
 #artists>div:hover,#albums>div:hover,#playlists>div:hover,#episodes>div:hover{
 
     cursor: pointer;
-    background-color: #232323;
+    background-color: #292929;
 
 }
 #albums>div>img,#playlists>div>img,#episodes>div>img{
@@ -153,13 +153,16 @@ body{
     /* border-radius: 8px; */
     border-radius: 50%;
 }
-
-
-#artists>div>h3,#albums>div>h3,#playlists>div>h3,#episodes>div>h3{
-    font-size: 16px;
+#artists>div>div,#albums>div>div,#playlists>div>div,#episodes>div>div{
+    height: 10px;
     overflow: hidden;
     box-sizing: content-box;
     max-lines: 1;
+}
+
+#artists>div>h3,#albums>div>h3,#playlists>div>h3,#episodes>div>h3{
+    font-size: 16px;
+   
 
     margin-left: 13px;
     margin-bottom: -10px;
