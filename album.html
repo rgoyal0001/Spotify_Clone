@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global warming</title>
+    <style>
+        /* #header{
+            display: flex;
+            gap: 20px;
+            /* border: 1px solid red; */
+            padding-left: 1.5%;
+            padding-bottom: 1%;
+            background-color: rgb(88, 166, 211);
+        }
+        #header > div{
+            /* border: 1px solid red; */
+            margin-top: 11%;
+        }
+        #header_image {
+            width: 15%;
+            height: 220px;
+        }
+        #header_image img{
+            width: 100%;
+            height: 100%;
+        }
+        #header_names{
+            /* border: 1px solid red; */
+            padding-top: 5%;
+            color: white;
+        }
+        #album_type{
+            text-transform: uppercase;
+            text-decoration:double;
+        }
+        #song_name{
+            height: 70px;
+            /* border: 1px solid red; */
+            padding: none;
+            margin-top: -20px;
+        }
+        #name{
+            font-size: 90px;
+            margin: 0px;
+            font-weight: 1000;
+        }
+        #singer{
+            margin-top: 30px;
+        }
+        #headerSongDetails{
+            font-size: smaller;
+        }
+
+    
+         */
+        
+       
+
+    </style>
+</head>
+<body>
+    <!-- <div id="header">
+        <div id="header_image"></div>
+        <div id="header_names">
+            <div><p id="album_type"></p></div>
+            <div id="song_name"><p id="name"></p></div>
+            <div id="singer">
+                <p id="headerSongDetails"></p>
+            </div>
+
+        </div>        
+    </div> -->
+
+    <div id="episodes">
+        <p>All Episodes</p>
+        <hr>
+        <div id="tracks"></div>
+    </div>
+</body>
+<script>
+    let authToken="BQATQcdOq_vjRUaSLSipqj4B-EzEHoa4pEx_sUd6GJjTuCcBgvcz6ocktZa7TNZbPvioU2_s0lILH8TpuRbb7cOkeXNgUeoHbqSIk2B5P4fC-LsXBgESPaEGNz0mVJqR-D-URbkXQ6nJb-TnT0oLxWFThx6THKgfTS8"
+    let getData = async function(){
+        let id="1Iw0fZs9DzYcft0D6amarv"
+          try {
+              
+          //  categories = https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=10&offset=5
+          //  genre = https://api.spotify.com/v1/recommendations/available-genre-seeds
+  
+  
+          let res= await fetch(` https://api.spotify.com/v1/shows/${id}/episodes`,{
+          method:"GET",
+          headers:{
+              "Accept":"application/json",
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${authToken}`,
+          }
+          
+          })
+  
+          let data= await res.json();
+          console.log(data);
+          //displayData(data);
+          } 
+          catch (error) {
+              console.log(error)
+          }
+      }
+      getData();
+
+    //   function displayData(data){
+    //     let header_image=document.getElementById('header_image')
+    //     let img=document.createElement('img');
+    //     img.src=data.album.images[1].url;
+
+    //     header_image.append(img)
+
+    //     let header_names=document.getElementById('header_names')
+    //     let album_type=document.getElementById('album_type')
+    //     album_type.textContent="single";
+    //     let name=document.getElementById('name')
+    //     name.textContent=data.album.name;
+    //     // let singer_name=document.getElementById('singer_name')
+    //     // singer_name.textContent=data.album.artists[0].name;
+    //     // let date=document.getElementById('date')
+    //     // date.textContent=data.album.release_date;
+    //     // let total_tracks=document.getElementById('total_trcks')
+    //     // total_tracks.textContent=data.album.total_tracks + " song,";
+    //     // let duration=document.getElementById('duration')
+    //     // duration.textContent=data.duration_ms;
+        
+    //     // header_names.append(album_type,name,singer_name,date,total_tracks,duration)
+
+    //     let headerSongDetails=document.getElementById('headerSongDetails')
+    //     headerSongDetails.textContent=data.album.artists[0].name + " ~ " + data.album.release_date +  " ~ " + data.album.total_tracks + " song ~ " + data.duration_ms;
+
+    //     let tracks=document.getElementById('tracks')
+    //     let table=document.createElement('table');
+
+
+    //   }
+
+</script>
+</html>
