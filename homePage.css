@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+}
+
+#container {
+    /* display: flex; */
+    /* flex-direction: row; */
+    background-color: #212020;
+    ;
+    width: 100%;
+}
+
+.playlists {
+
+    display: flex;
+    flex-direction: row;
+    /* margin: 5%; */
+}
+
+.playlists>div {
+    background-color: #181818;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 1%;
+}
+
+.genre {
+    padding: 20px;
+    display: flex;
+}
+
+.genre>div {
+    /* width: 95%; */
+    margin-left: 72%;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.genre>div>button {
+    background: rgba(182, 182, 182, 0.0);
+    border: none;
+    color: #9f9f9f;
+    font-weight: 700;
+
+}
+
+#container>div {
+    margin: 10px;
+    padding: 10px;
+    background-color: #212020;
+    color: white;
+    border-radius: 5px;
+    height: 70%;
+}
+.imgDiv{
+    position: relative;
+}
+
+#container img {
+    /* height: 10vw;
+    border-radius: 5px; */
+    height: 70%;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.description {
+    height: 14%;
+    /* background-color: red; */
+    /* white-space: nowrap; */
+    width: 150px;
+    /* height: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
+    height: 6%;
+    /* background-color: red; */
+    /* white-space: nowrap; */
+    width: 150px;
+    /* height: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 7% 0;
+}
+
+.playButton {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    background-color: green;
+    height: 18%;
+    width: 18%;
+    padding-top: 5%;
+    padding-left: 5%;
+    border-radius: 50px;
+}
+.playButton button {
+    background-color: green;
+}
+
+.playlists>div:hover {
+    background-color: #2d2c2c;
+}
+
+.playlists>div:hover span {
+    display: block;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(174, 173, 173);
+}
+
+h1 {
+    font-size: 25px;
+}
+
+#check {
+    height: 30px;
+    width: 30px;
+}
