@@ -32,26 +32,23 @@
       "user_DOBday": "",
       "user_gender": "Non-binary",
       "id": 3
+    },
+    {
+      "user_email": "anyone@gmail.com",
+      "user_conform_email": "anyone@gmail.com",
+      "user_password": "123456789",
+      "user_profilename": "Anyone",
+      "uer_DOByear": "2000",
+      "user_DOBmonth": "February",
+      "user_DOBday": "29",
+      "user_gender": "Male",
+      "id": 4
     }
   ],
   "playlist": [
     {
-      "Number_of_play_list": "My Playlist #1",
+      "Number_of_play_list": "My Playlist #",
       "id": 1
-    },
-    {
-      "Number_of_play_list": "My Playlist #1",
-      "id": 2
-    },
-    {
-      "Number_of_play_list": "My Playlist #1",
-      "id": 3
-    },
-    {
-      "Number_of_play_list": "My Playlist #1",
-      "id": 4
     }
-  ],
-  "playlistTrackId": [
   ]
 }

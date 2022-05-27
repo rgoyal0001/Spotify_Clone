@@ -3,12 +3,13 @@
     padding: 0;
     /* color: white; */
     font-family: Helvetica,Arial,sans-serif;
-    color: white;
+    /* color: white; */
 }
 
 #side_bar{
     width: 17%;
-    height: 550px;
+    height: 100vh;
+    position: fixed;
     background-color: black;
     display: flex;
     justify-content: start;
@@ -31,7 +32,7 @@
 }
  .sidebar_div_a{
     text-decoration: none;
-    color: rgb(212, 42, 42);
+    color: rgb(177, 177, 177);
 } 
 .sidebar_div_a:hover{
     color: white;

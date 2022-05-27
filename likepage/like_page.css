@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+    color: white;
+}
+#like_song_cont{
+    height: 450px;
+    /* border: 1px solid rgb(96, 96, 138) ; */
+    /* margin-top:0px ; */
+    width:80% ;
+    margin-left: 230px;
+    background: rgb(2,0,36);
+    background: linear-gradient(311deg, rgb(25, 21, 109) 0%, rgb(19, 19, 59) 35%, rgb(109, 105, 187) 100%);
+    
+}
+#details_like{
+    /* border: 1px solid rgb(213, 224, 213); */
+    margin: 140px 0px;
+    /* margin-top: 140px; */
+    height: 300px;
+    width: 90%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-end;
+    justify-content: end;
+    
+}
+#like_heading{
+    /* border: 1px solid green; */
+    width:70% ;
+    height: 170px;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+#like_heading h1{
+    font-size: 85px;
+    /* color: gold; */
+
+}
+#like_button{
+    background: rgb(2,0,36);
+    background: linear-gradient(311deg, rgb(25, 21, 109) 0%, rgb(19, 19, 59) 35%, rgb(18, 18, 24) 100%);
+    margin: -135px -1px;
+    height: 570px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    
+
+}
+
+#div_likebutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* top: 65%;
+    left: 80%; */
+    background-color: #1ed760;
+    height:65px;
+    width: 65px;
+    /* padding-top: 4%;
+    padding-left: 4%; */
+    border-radius: 50px;
+    transition: 100ms;
+    align-items: center;
+    margin: 30px 50px;
+
+}
+#div_likebutton button{
+    background-color: #1ed760;
+    border: none;
+    /* padding-left: 10%; */
+    /* align-items: center; */
+    /* border-radius: 20px */
+    
+
+    
+}
+#div_likebutton button svg{
+    background-color: #1ed760;
+}
+#div_likebutton:hover{
+    transform: scale(1.1);
+}
+
+#song_name{
+    margin-top: -450px;
+}
+#title{
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: column;
+    /* width: 140%; */
+    
+}
+
+#title>div{
+    display: flex;
+    margin-top: 5px;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* padding: 0px 16px; */
+}
+#title>div:hover{
+    cursor: pointer;
+    background-color: #232323;
+}
+#title>div>div{
+    padding: 2px;
+}
+
+#title>div>div:nth-child(1){
+    /* border: 1px solid; */
+    width: 5%;
+}
+#title>div>div:nth-child(2){
+    width: 87%;
+}
+#title>div>div:nth-child(3){
+    font-size: 14px;
+    
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+
+}
+
+
+
+#title img{
+    width: 2.5rem;
+    margin-top: 5px;
+    margin-left: 5px;
+    
+    /* display: block; */
+}
+
+#title h3{
+    font-size: 15px;
+    /* color: red; */
+    color: white;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    /* margin-left: 5px; */
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+
+#title p{
+    font-size: 13px;
+    /* margin-left: 5px; */
+    margin-top: 15px;
+    color: #b3b3b3;
+    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+}
+.likesong_id
+{
+    border: 1px solid rebeccapurple
+    /* display: ; */
+}
+
+#titleHead{
+    border-bottom: 0.5px solid #515151;
+    margin-bottom: 5px;
+    /* padding-bottom: 150px; */
+}
+
+#titleHead>div:nth-child(1){
+    text-align: center;
+}
+#titleHead:hover{
+    
+    background-color: black !important;
+}

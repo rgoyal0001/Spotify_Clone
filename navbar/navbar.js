@@ -1,3 +1,3 @@
 function home(){
-    window.location.href="./landingPage.html"
+    window.location.href="./landingPageLogin.html"
 }
