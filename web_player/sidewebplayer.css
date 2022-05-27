@@ -8,7 +8,8 @@
 
 #side_bar{
     width: 17%;
-    height: 550px;
+    height: 100vh;
+    position: fixed;
     background-color: black;
     display: flex;
     justify-content: start;
