@@ -42,22 +42,45 @@
         </div>
         <div id="sigup_email" class="signup_div_input">
             <label for="" class="signup_label">Email address or username</label>
-            <input type="text" class="signup_input" placeholder="Email address or username">
-           
+            <input type="email" class="signup_input" placeholder="Email address or username" id="login_input">
+
         </div>
-        
+
         <div id="sigup_password" class="signup_div_input">
             <label for="" class="signup_label">password</label>
-            <input type="text" class="signup_input" placeholder="Password">
-            
+            <input type="password" class="signup_input" placeholder="Password" id="login_password">
+
         </div>
-       
-        
+        <div id="password_login">
+            <div id="forgetPassword">
+
+                <a href="">Forgot your password?</a>
+                <div id="signp_fst">
+                    <input type="checkbox" name="" id="Rememberpassword" value="fst">
+                    <label for="fst">Remember me</label>
+                </div>
+            </div>
+            <div id="loginbutton">
+                <button id="signup_button" onclick="loginuser()">
+              LOG IN
+                </button>
+            </div>
+
+        </div>
+        <div id="hr"></div>
+        <div id="login_account">
+            <b>Don't have an account?</b>
+        </div>
+        <div id="signup_soptify" onclick="gotosignup_page()">
            
-           </div>
+            <label for="">SIGN UP FOR SPOTIFY</label>
         </div>
-        
-               
+
+
+    </div>
+
+
+
     </div>
     <div id="singUp_fix_inage">
         <img src="Screenshot 2022-05-24 201620.png" alt="">
@@ -65,3 +88,4 @@
 </body>
 
 </html>
+<script src="./login.js"></script>

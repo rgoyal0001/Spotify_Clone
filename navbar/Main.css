@@ -72,5 +72,18 @@
     font-weight: bold;
     height: 20px;
 }
+#afterchange{
 
+color: white;
+font-family: Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+#afterchange:hover{
+    color: rgb(32, 170, 32);
+}
 
+#img_change{
+    height: 20px;
+    width: 20px;
+    /* background-color: white; */
+}

@@ -1,0 +1,22 @@
+{
+  "name": "spotify_webapp_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "searchPage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepaksahu3698/Spotify_webapp_Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepaksahu3698/Spotify_webapp_Clone/issues"
+  },
+  "homepage": "https://github.com/deepaksahu3698/Spotify_webapp_Clone#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
