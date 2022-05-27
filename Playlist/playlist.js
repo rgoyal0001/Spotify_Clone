@@ -1,29 +1,41 @@
-const playlistTrackId=[
-    {
-        trackId:"0mHU8dcIvGrGDazLMmQpSg"
-    },
-    {
-        trackId:"3oWxFNsXstcancCR1wODR4"
-    },
-    {
+// const playlistTrackId=[
+//     {
+//         trackId:"0mHU8dcIvGrGDazLMmQpSg"
+//     },
+//     {
+//         trackId:"3oWxFNsXstcancCR1wODR4"
+//     },
+//     {
         
-        trackId:"5w0Xpt2YHT2Y3z3e4UUJP7"
-    }
-]
+//         trackId:"5w0Xpt2YHT2Y3z3e4UUJP7"
+//     }
+// ]
+async function getid(){
+    try {
+        
+        let res=await fetch(`http://localhost:3000/playlistTrackId`)
+        let data=await res.json()
+        // console.log(data)
+ 
 
-playlistTrackId.forEach(track=>{
+data.forEach(track=>{
    
     fetchData(track.trackId)
 
 })
+} catch (error) {
+    console.log(error)
+}
+}
 
 let flag=true;
+getid()
 async function fetchData(trackId){
    
         
         try {
-            const authToken= localStorage.getItem("authToken")
-            
+            // const authToken= localStorage.getItem("authToken")
+            const authToken="BQDWOX8h3e0EBrtceHYtRlWX4b9o7dDv4TcergFImb6h3-SlI6b3gL1DWsVCYmow8FDOAgHa-XJnFzR3XTGd7cpHUebI6bRMDELto498vtNRZRQWdmnZ0XhvQBTRx3EoLITjiuIIGgAfhQeBO_zht62tt0Ioe1AsYpY"
           
             let res= await fetch(`https://api.spotify.com/v1/tracks/${trackId}`,{
             method:"GET",
@@ -36,15 +48,16 @@ async function fetchData(trackId){
     
             let data= await res.json();
             // console.log(data.tracks.items);
+            // displayAlbumInfo(data)
             
             displayTracks(data);
+            // displayAlbumInfo(data)
             // console.log(data);
 
-
-            if(flag){
-                displayAlbumInfo(data)
-                flag=false;
-            }
+            // if(flag){
+                
+            //     flag=false;
+            // }
           
     
         } catch (error) {
@@ -54,7 +67,7 @@ async function fetchData(trackId){
 }
 
 function displayTracks(track){
-    console.log(track);
+    // console.log(track);
     // document.querySelector("#title").innerHTML=""
 
     // tracks.forEach(track => {
@@ -86,16 +99,16 @@ function displayTracks(track){
 
     let timeBox=document.createElement("div");
     timeBox.textContent=(track.duration_ms/60000).toFixed(2).toString().replace(".",":")  ;
-
+    // console.log(imgBox,infoBox,timeBox)
     mainBox.append(imgBox,infoBox,timeBox)
     document.querySelector("#title").append(mainBox);
 
 }
 
 function displayAlbumInfo(track){
-
-    // console.log(track);
-
+    console.log("1")
+    console.log(track);
+    let playlistinfo=document.getElementById("playlistInfo")
     let imgBox= document.createElement("div");
 
     let img=document.createElement("img");
@@ -115,12 +128,15 @@ function displayAlbumInfo(track){
     name.textContent="My Playlist";
     nameBox.append(name);
 
-    let albumInfo=document.createElement("div");
-    let info=document.createElement("span");
-    info.textContent=`${playlistTrackId.length} songs `;
+    // let albumInfo=document.createElement("div");
+    // let info=document.createElement("span");
+    // info.textContent=`${playlistTrackId.length} songs `;
+// console.log(albumTypeBox,nameBox)
 
-    infoBox.append(albumTypeBox,nameBox,albumInfo);
+    infoBox.append(albumTypeBox,nameBox);
+    
+    playlistinfo.append(infoBox)
 
-    document.querySelector("#playlistInfo").append(imgBox,infoBox);
+    // document.querySelector("#playlistInfo").append(imgBox,infoBox);
 
 }
