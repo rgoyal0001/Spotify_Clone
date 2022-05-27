@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#up-bar {
+    display: flex;
+    height: 60px;
+    background-color: rgb(24, 24, 28);
+    color: aliceblue;
+}
+
+#arrow,
+#sign-in {
+    width: 50%;
+}
+
+#arrow {
+    display: flex;
+    margin-left: 3%;
+}
+
+#sign-in {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#arrow button {
+    background-color: rgb(21, 21, 34);
+    width: 33px;
+    height: 30px;
+    border-radius: 70%;
+    /* margin-top: 10px; */
+    text-align: center;
+    /* padding: 5px 0; */
+    margin: 13px 4% 0;
+    border: none;
+
+}
+
+#right-button {
+    /* background-color: aqua; */
+    margin-left: 15px;
+}
+
+#sign-in button {
+    margin: 5px;
+    padding: 15px 30px;
+    background: rgba(182, 182, 182, 0.0);
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(196, 191, 191);
+}
+
+#log-in button {
+    background-color: rgb(253, 253, 253, 1.0);
+    border-radius: 30px;
+    margin-right: 30px;
+    color: black;
+
+}
+
+button {
+    fill: rgb(219, 217, 217);
+}
+
+#sign-in button:hover, #arrow button:hover {
+    cursor: pointer;
+}

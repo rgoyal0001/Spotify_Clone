@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+}
+
+#container {
+    /* display: flex; */
+    /* flex-direction: row; */
+    background-color: #212020;
+    margin-left: 16%;
+    /* margin-top: 5%; */
+    width: 84%;
+}
+
+.playlists {
+
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.playlists>div {
+    background-color: #181818;
+    border-radius: 5px;
+    margin: 8% 10px;
+    padding: 1% 1% 2%;
+    transition: 500ms
+}
+
+.genre {
+    padding: 20px;
+    display: flex;
+}
+
+/* .genre>div {
+    // width: 95%; 
+    margin-left: 72%;
+
+    display: flex;
+    flex-direction: row-reverse;
+} */
+
+/* .genre>div>button {
+    background: rgba(182, 182, 182, 0.0);
+    border: none;
+    color: #9f9f9f;
+    font-weight: 700;
+
+} */
+
+#container>div {
+    /* margin: 10px; */
+    padding: 10px;
+    background-color: #212020;
+    color: white;
+    border-radius: 5px;
+    height: 70%;
+}
+.imgDiv{
+    position: relative;
+}
+
+#container img {
+    /* height: 10vw;
+    border-radius: 5px; */
+    height: 70%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.description {
+    height: 30px;
+    /* background-color: red; */
+    /* white-space: nowrap; */
+    width: 150px;
+    /* height: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
+    height: 11px;
+    /* background-color: red; */
+    /* white-space: nowrap; */
+    width: 150px;
+    /* height: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 7% 0;
+}
+
+.playButton {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    background-color: #1ed760;
+    height: 20%;
+    width: 20%;
+    padding-top: 5%;
+    padding-left: 5%;
+    border-radius: 50px;
+    transition: 100ms;
+    cursor: pointer;
+    
+}
+.playlists > div{
+    cursor: pointer;
+}
+.playButton button {
+    background-color: #1ed760;
+    border: none;
+    padding-left: 10%;
+}
+.playButton button svg{
+    fill: #171717
+}
+
+.playlists>div:hover {
+    background-color: #2d2c2c;
+}
+/* .imgDiv{
+    position: relative;
+} */
+
+.playlists>div:hover span {
+    display: block;
+}
+.imgDiv span:hover{
+    padding-top: 6%;
+    padding-left: 6%;
+    height: 21%;
+    width: 21%;
+    top: 68%;
+}
+h2 {
+    font-size: 17px;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(174, 173, 173);
+}
+
+h1 {
+    font-size: 25px;
+}
+
+
+
+
+
