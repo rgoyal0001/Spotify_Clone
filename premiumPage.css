@@ -252,4 +252,132 @@ body{
     margin-top:  16px;
 
 }
-   
+
+@media only screen and (max-width:700px){
+    #getPremium>h2
+    {
+    font-size: 20px; 
+    font-weight: 100;
+    margin: 20px 0px 0px;
+    }
+
+    
+    #getPremium>h1
+    {
+    font-size: 30px; 
+    }
+
+    #getPremium>div>button:nth-child(1){
+    
+        padding: 14px 32px;
+        background-color: #000000;
+        border-radius: 500px;
+        margin: 35px 0px 0px ;
+        font-size: 12px; 
+    }
+    #getPremium>div>button:nth-child(2){
+        padding: 14px 32px;
+        font-size: 12px; 
+        border-color: #FFFFFF;
+    }
+    #getPremium>p{
+        margin: 30px 0px 0px;
+        font-size: 7px; 
+    }
+    
+#introduction> h1{
+    font-size: 30px; 
+    padding: 50px 0px 13px 0px;
+}
+#introduction> h2{
+    margin-bottom: -10px;
+    font-weight: 100;
+}
+#introduction> div>button{
+    margin-top: 50px;
+    padding: 14px 32px;
+    border-radius: 500px;
+    font-size: 10px; 
+}
+#introduction>p{
+    margin: 36px 0px ;
+    font-size: 8px; 
+}
+
+#power{
+    margin: 0px 0px;
+    padding-bottom: 100px;
+}
+#power>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    margin: auto;
+}
+
+#power>div>div>img{
+    
+    margin: 0px 71.5px 20px;
+    width: 30%;
+}
+#power>div>div>p:nth-child(3){
+    
+    font-size: 11px;
+}
+#power>div>div>p:nth-child(2){
+    font-weight: 550;
+    font-size: 15px;
+}
+
+#connect{
+    padding: 0px ;
+}
+#connect>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    margin: auto;
+}
+
+#connect>div>div>img{
+
+    margin: 0px 71.5px 10px 71.5px;
+    width: 40%;
+    margin: auto;
+}
+#connect>div>div>p:nth-child(3){
+    
+    font-size: 11px;
+}
+#connect>div>div>p:nth-child(2){
+    font-weight: 550;
+    font-size: 15px;
+}
+
+#pickPremium>h2{
+    font-size: 30px;
+}
+#pickPremium>h3{
+    font-size: 20px;
+}
+#pickPremium>div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    margin: auto;
+    
+    gap: 20px;
+    justify-content: center;
+    
+}
+#pickPremium>div>div>button{
+    margin-bottom: 10px;
+    /* margin-top: -1px; */
+}
+
+}
+
+
+
