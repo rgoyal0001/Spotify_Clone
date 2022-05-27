@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Helvetica,Arial,sans-serif;
 }
 #sign_up_cont{
     height: 800px;
@@ -57,10 +58,10 @@ align-items: center;
     font-family: Helvetica,Arial,sans-serif;
     font-size: 14px;
     /* font-weight: bold; */
-margin: 10px 0px;
+   margin: 10px 0px;
 }
 #signup_facebook:hover{
-   border:1px solid rgba(0, 0, 0, 0.9)
+   border: 1px solid black;
     
 }
 #signup_google{
@@ -145,4 +146,70 @@ border: 1px solid rgb(100, 100, 100);
     bottom: 0;
     right: 0;
     /* margin: ; */
+}
+#password_login{
+    display: flex;
+    /* border: 1px solid rebeccapurple; */
+    height: 70px;
+    width: 70%;
+  
+    gap: 60px;
+}
+#forgetPassword{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+}
+#forgetPassword a{
+    color:black;
+    text-decoration: none;
+}
+#forgetPassword a:hover{
+    text-decoration: underline;
+}
+#Rememberpassword:hover{
+    /* height: 50px; */
+    border: 1px solid green;
+}
+#signup_button{
+    height: 50px;
+    width: 90%;
+    color: black;
+    font-family: Helvetica,Arial,sans-serif;
+    background-color: rgb(99, 196, 99);
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    margin-left: 120px;
+}
+#signup_button:hover{
+    transform: scale(1.05);
+}
+#loginbutton{
+    margin-left: -150px;
+}
+#signup_go_page_button{
+    height: 50px;
+    width: 100%;
+}
+#signup_soptify{
+    border: 1px solid rgb(177, 161, 161);
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(153, 149, 145);
+    font-size: 15px;
+    font-size: 19px;
+    font-size: 15px;
+}
+#signup_soptify:hover{
+    border:1px solid black ;
 }
