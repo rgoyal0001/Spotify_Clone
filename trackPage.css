@@ -28,34 +28,46 @@ body{
     width: 210px;
     height: 210px;
 }
+#albumInfo>div:nth-child(2){
 
-#albumInfo>div:nth-child(2)>h2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: baseline;
+}
+#albumInfo>div:nth-child(2)>div:nth-child(2){
+
+    width: 100%;
+}
+#albumInfo>div:nth-child(2)>div>h2{
     margin-top: 6%;
     
     font-size: 12px;
-
+    
 }
 
 #albumInfo>div:nth-child(2){
 
     padding: 20px;
 }
-#albumInfo>div:nth-child(2)>h1{
+#albumInfo>div:nth-child(2)>div>h1{
     
     margin: -5px 0px 9px 0px ;
     font-size: 2.7vw;
+    font-size: 200%;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
     
 }
 
-#albumInfo>div:nth-child(2)>img{
+#albumInfo>div:nth-child(2)>div>img{
     width: 20px;
     height: 20px;
     margin-bottom: -5px;
     border-radius: 50%;
 }
 
-#albumInfo>div:nth-child(2)>span{
+#albumInfo>div:nth-child(2)>div>span{
     font-size: 14px ;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
 

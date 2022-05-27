@@ -90,8 +90,29 @@ function displayTrackData(tracks){
         button6.textContent="Add to Playlist";
 
         button6.addEventListener("click",function(){
-            console.log(track.id)
-            hideOptions();
+            console.log(track)
+            addToPlaylist(track);
+
+            async function addToPlaylist(track){
+                try {
+                    let body={
+                        "trackId":track.id,
+                        
+                    }
+                    
+                    console.log(body)
+                    let res=await fetch(`http://localhost:3000/playlistTrackId`,{
+                        method:"POST",
+                        body:JSON.stringify(body),
+                        headers:{
+                            "Content-Type":"application/json"
+                        }
+                    })
+                    hideOptions();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
         })
         let button7=document.createElement("button");
         button7.textContent="Open in Desktop app";
@@ -208,13 +229,14 @@ function displaySuggestion(tracks){
     button6.textContent="Add to Playlist";
 
     button6.addEventListener("click",function(){
-        console.log(track.id)
-        addToPlaylist(track.id);
+        console.log(track)
+        addToPlaylist(track);
 
             async function addToPlaylist(trackId){
                 try {
                     let body={
                         "trackId":trackId,
+                        
                     }
         
                     let res=await fetch(`http://localhost:3000/playlistTrackId`,{
@@ -254,6 +276,8 @@ function displaySuggestion(tracks){
 
   });
 }
+
+
 function displayAlbumInfo(album){
    
 
@@ -266,6 +290,28 @@ function displayAlbumInfo(album){
 
     let infoBox= document.createElement("div");
     
+    
+
+    
+    
+    let albumTypeBox=document.createElement("div")
+    let albumType=document.createElement("h2");
+    albumType.textContent=album.albumType.toUpperCase();
+    albumTypeBox.append(albumType);
+    
+    
+    
+
+    let nameBox=document.createElement("div")
+    let name=document.createElement("h1");
+    name.textContent=album.name;
+    nameBox.append(name);
+    
+    let albumInfo=document.createElement("div");
+
+    let artistImg=document.createElement("img");
+    artistImg.src=album.img[0].url;
+
     if(album.artists.length>1){
         artistName= "Various Artist";
         
@@ -273,28 +319,15 @@ function displayAlbumInfo(album){
     else{
         artistName=album.artists[0].name;
     }
-    
-    let artistImg=document.createElement("img");
-    artistImg.src=album.img[0].url;
-
-
-    let albumType=document.createElement("h2");
-    albumType.textContent=album.albumType.toUpperCase();
-
-    let name=document.createElement("h1");
-    name.textContent=album.name;
-
 
     let info=document.createElement("span");
     info.textContent=`  ${ artistName} • ${album.release_date.substring(0,4)} • ${album.totalTracks} songs`;
 
-    infoBox.append(albumType,name,artistImg,info);
+    albumInfo.append(artistImg,info)
 
-    document.querySelector("#albumInfo").append(imgBox,infoBox)
+    infoBox.append(albumTypeBox,nameBox,albumInfo);
 
+    document.querySelector("#albumInfo").append(imgBox,infoBox);
 
-
-
-    
 }
 
