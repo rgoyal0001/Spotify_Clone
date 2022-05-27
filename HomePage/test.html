@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let authToken = JSON.parse(localStorage.getItem("authToken"));
+
+    let songId  = "4ihCRhtEKfiVcTwIjG7vdf";
+    let playlistTracksId = "37i9dQZF1DX4PuX0TYecTF";
+    let getPlaylistTracks = async function (playlistTracksId) {
+        try {
+
+            //  categories = https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=10&offset=5
+            //  genre = https://api.spotify.com/v1/recommendations/available-genre-seeds
+
+        //    track = api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl?market=IN
+
+        // tracks = https://api.spotify.com/v1/playlists/${playlistTracksId}/tracks?market=ES&limit=10&offset=5
+
+            let res = await fetch(`https://api.spotify.com/v1/tracks/${playlistTracksId}?market=IN`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${authToken}`,
+                }
+
+            })
+
+            let data = await res.json();
+            console.log(data);
+            // playlistsIds(data.categories.items);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    getPlaylistTracks(songId);
+</script>
