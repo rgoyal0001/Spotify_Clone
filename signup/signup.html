@@ -34,22 +34,22 @@
         </div>
         <div id="sigup_email" class="signup_div_input">
             <label for="" class="signup_label">What's your email?</label>
-            <input type="text" class="signup_input" placeholder="Enter your email.">
+            <input type="email" class="signup_input" placeholder="Enter your email." id="signup_email">
             <p id="signup_para">Use phone number instead.</p>
         </div>
         <div id="sigup_conform_email" class="signup_div_input">
             <label for="" class="signup_label">Confirm your email</label>
-            <input type="text" class="signup_input" placeholder="Enter your email again.">
+            <input type="email" class="signup_input" placeholder="Enter your email again." id="Signup_user_conform_email">
             
         </div>
         <div id="sigup_password" class="signup_div_input">
             <label for="" class="signup_label">Create a password</label>
-            <input type="text" class="signup_input" placeholder="Create a password.">
+            <input type="password" class="signup_input" placeholder="Create a password." id="signup_userpassword">
             
         </div>
         <div id="sigup_profilename" class="signup_div_input">
             <label for="" class="signup_label">What should we call you?</label>
-            <input type="text" class="signup_input" placeholder="Enter a profile name.">
+            <input type="text" class="signup_input" placeholder="Enter a profile name." id="user_profilename">
             <p id="signup_profilename">This appears on your profile.</p>
             
         </div>
@@ -60,7 +60,7 @@
             <div id="signup_year_div">
                
                  <p class="signup_para">Year</p>
-                 <input type="text" name="" id="signup_year" placeholder="YYYY">
+                 <input type="text" name="" id="signup_dobyear" placeholder="YYYY">
 
             </div>
             <div id="signup_month_div">
@@ -94,14 +94,15 @@
             <label for="" class="signup_label">What's your gender?</label>
             
            <div id="signup_radio">
-            <input type="radio" id="html" name="name" value="Male">
+            <input type="radio" id="Male" name="gender" value="Male">
             <label for="Male">Male</label><br>
-            <input type="radio" id="css" name="Female" value="Female">
+            <input type="radio" id="Female" name="gender" value="Female">
             <label for="Female">Female</label><br>
-            <input type="radio" id="Non-binary" name="fav_language" value="Non-binary">
+            <input type="radio" id="Non-binary" name="gender" value="Non-binary">
             <label for="Non-binary">Non-binary</label>
             
            </div>
+        
         </div>
         <div id="signup_checkbutton" class="signup_div_input">
             <div id="signp_fst">
@@ -116,7 +117,8 @@
         </div>
         <div id="signup_robot"  >
             <div id="robot_check">
-                <div id="robot_id"></div>
+                <div id="robot_id" onclick="rightSymbol()">
+                <input type="checkbox" name="" id="roboto_checked"></div>
                 <label for="snd">I`m not a robot</label>
             </div>
             <div id="roboto_image">
@@ -128,12 +130,12 @@
             <p class="signup_condition_para" >To learn more about how Spotify collects, uses, shares and protects your personal data, please see <span class="condition_class"> Spotify's Privacy Policy.</span></p>
         </div>
         <div id="button_id">
-            <button id="signup_button" >
+            <button id="signup_button" onclick="create_userdata()">
                 Sign up
             </button>
         </div>
         <div id="signup_newacount">
-            <p>Have an account? <span class="condition_class">Log in </span>.</p>
+            <p>Have an account? <span class="condition_class" onclick="gotologinpage()">Log in </span>.</p>
         </div>
         
     </div>
@@ -141,5 +143,6 @@
         <img src="Screenshot 2022-05-24 201620.png" alt="">
     </div>
 </body>
+<script src="./sigup.js"></script>
 
 </html>

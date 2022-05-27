@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download</title>
+    <link rel="stylesheet" href="./navbar/Main.css">
+    <link rel="stylesheet" href="./footer/footer.css">
     <style>
         * {
             margin: 0;
@@ -140,6 +142,9 @@
 </head>
 
 <body>
+    <div id="nav_bar">
+
+    </div>
     <div id="container">
         <div id="upper-container">
             <div id="computer-icon">
@@ -182,6 +187,36 @@
             </div>
         </div>
     </div>
+    <div id="foter_comp">
+
+    </div>
 </body>
 
+<script type="module">
+    import nav from "./component/navbar_comp.js"
+    import footerr from "./component/footer_comp.js"
+    var navi=document.getElementById("nav_bar")
+    navi.innerHTML=nav()
+    let profile_name=localStorage.getItem("user_name")
+//  console.log(profile_name)
+if(profile_name){
+    let changed_value=document.getElementById("nav_secondpart")
+    changed_value.innerHTML=""
+    var profil_cont=document.createElement("div")
+    profil_cont.setAttribute("id","afterchange")
+    var imgg=document.createElement("img")
+    imgg.setAttribute("id","img_change")
+    imgg.src="kindpng_211168.png"
+    let profile=document.createElement("b")
+    profile.textContent=profile_name
+    profil_cont.append(imgg,profile)
+    changed_value.append(profil_cont)
+
+}
+    var footer=document.getElementById("foter_comp")
+    footer.innerHTML=footerr()
+   
+
+</script>
+<script src="./navbar/navbar.js"></script>
 </html>

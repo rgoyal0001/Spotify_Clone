@@ -135,7 +135,7 @@ border: 1px solid rgb(100, 100, 100);
     /* border: 1px solid green; */
     width: 30%;
 }
-#signup_year{
+#signup_dobyear{
     height: 50px;
     width: 90%;
     /* padding: 0px 10px; */
@@ -223,13 +223,19 @@ select{
 #robot_id{
     height: 25px;
     width: 17%;
-    border: 1px solid rgb(82, 81, 83);
-   
+    /* border: 1px solid rgb(82, 81, 83); */
+    color: green;
+   font-size: 20px;
+}
+#roboto_checked{
+    width: 20px;
+   height: 20px;
 }
 #roboto_image img{
     height: 47px;
     width: 120%;
 }
+
 #signup_condition{
     width: 70%;
     text-align: center;
@@ -244,6 +250,7 @@ select{
 .condition_class{
     color: green;
     text-decoration: underline;
+    cursor: pointer;
 }
 #signup_button{
     height: 60px;
