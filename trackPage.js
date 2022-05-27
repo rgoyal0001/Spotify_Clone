@@ -94,9 +94,10 @@ function displayTrackData(tracks){
             addToPlaylist(track);
 
             async function addToPlaylist(track){
+                console.log(track.id)
                 try {
                     let body={
-                        "trackId":track.id,
+                        "trackId":track.id
                         
                     }
                     
@@ -108,6 +109,17 @@ function displayTrackData(tracks){
                             "Content-Type":"application/json"
                         }
                     })
+
+              
+                    // let res=await fetch(`http://localhost:3000/playlist`,{
+                    //     method:"POST",
+                    //     body:JSON.stringify(body),
+                    // headers:{
+                    //         "Content-Type":"application/json"
+                    //     }
+                        
+                    // })
+
                     hideOptions();
                 } catch (error) {
                     console.log(error);

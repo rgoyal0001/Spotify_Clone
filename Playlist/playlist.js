@@ -36,8 +36,7 @@ async function fetchData(trackId){
     
             let data= await res.json();
             // console.log(data.tracks.items);
-            
-            displayTracks(data);
+            // displayTracks(data);
             // console.log(data);
 
 
@@ -94,7 +93,7 @@ function displayTracks(track){
 
 function displayAlbumInfo(track){
 
-    // console.log(track);
+    console.log(track);
 
     let imgBox= document.createElement("div");
 
