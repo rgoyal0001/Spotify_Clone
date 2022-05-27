@@ -90,8 +90,28 @@ function displayTrackData(tracks){
         button6.textContent="Add to Playlist";
 
         button6.addEventListener("click",function(){
-            console.log(track.id)
-            hideOptions();
+            console.log(track.id);
+            addToPlaylist(track.id);
+
+            async function addToPlaylist(trackId){
+                try {
+                    let body={
+                        "trackId":trackId,
+                    }
+        
+                    let res=await fetch(`http://localhost:3000/playlistTrackId`,{
+                        method:"POST",
+                        body:JSON.stringify(body),
+                        headers:{
+                            "Content-Type":"application/json"
+                        }
+                    })
+                    hideOptions();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+           
         })
         let button7=document.createElement("button");
         button7.textContent="Open in Desktop app";

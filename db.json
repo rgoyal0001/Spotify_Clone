@@ -51,5 +51,11 @@
       "Number_of_play_list": "My Playlist #1",
       "id": 4
     }
+  ],
+  "playlistTrackId": [
+    {
+      "trackId": "0Y092nvVD5TOw9XOJdFS6h",
+      "id": 1
+    }
   ]
 }
