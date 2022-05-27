@@ -36,20 +36,12 @@
   ],
   "playlist": [
     {
-      "Number_of_play_list": "My Playlist #1",
+      "Number_of_play_list": "My Playlist #",
       "id": 1
     },
     {
-      "Number_of_play_list": "My Playlist #1",
+      "Number_of_play_list": "My Playlist #",
       "id": 2
-    },
-    {
-      "Number_of_play_list": "My Playlist #1",
-      "id": 3
-    },
-    {
-      "Number_of_play_list": "My Playlist #1",
-      "id": 4
     }
   ]
 }

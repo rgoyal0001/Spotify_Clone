@@ -6,6 +6,7 @@
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
 }
 #rightpart{
+    margin-top: 30px;
     height: auto;
     width: 80%;
     border: 1px solid gold;
@@ -13,7 +14,7 @@
     margin-left: 230px;
 }
 #bottompart{
-    margin-top: 120px;
+    /* margin-top: 120px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,6 +27,7 @@
     margin-top: 30px;
     height: 250px;
     width: 40%;
+    position: relative;
     border: 1px solid green;
     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     border-radius: 5px;
@@ -54,7 +56,7 @@
     border: 1px solid rgb(19, 102, 150);
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
 }
 .playlistdiv{
@@ -63,6 +65,107 @@
     border: 1px solid red;
     background-color: green;
 }
+.single_playlist{
+    border: 1px solid rebeccapurple;
+    width: 30%;
+    background-color: rgb(32, 30, 30);
+    margin:0px 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius:5px ;
+    gap: 10px;
+}
+.song_img{
+    margin-top: 10px;
+    height: 140px;
+    width: 140px;
+    /* border: 1px solid rgb(231, 0, 0); */
+    border-radius: 5px;
+    background-color: rgb(148, 137, 137);
+    position: relative;
+}
+.song_img img{
+    height: 140px;
+    width: 140px;
+}
+.name_of_the_palylist{
+    margin-left: -40px;
+    font-size: 14px;
+    background: none;
+
+}
+.owoner_name{
+    margin-left: -60px;
+    font-size: 14px;
+    color: rgb(129, 129, 129);
+    background: none;
+    font-weight: bold;
+}
+.playButton{
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    background-color: #1ed760;
+    height: 23%;
+    width: 25%;
+    padding-top: 7%;
+    padding-left: 5%;
+    border-radius: 50px;
+    transition: 100ms;
+    align-items: center;
 
 
+}.playButton button{
+    background-color: #1ed760;
+    border: none;
+    padding-left: 10%;
+    /* align-items: center; */
+    border-radius: 20px
 
+    
+}
+.playButton button svg{
+    background-color: #1ed760;
+   ;
+}
+
+.single_playlist:hover span {
+    display: block;
+}
+.single_playlist:hover{
+    background-color: rgb(73, 69, 69);
+}
+
+#div_likebutton{
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    background-color: #1ed760;
+    height: 15%;
+    width: 9%;
+    padding-top: 4%;
+    padding-left: 4%;
+    border-radius: 50px;
+    transition: 100ms;
+    align-items: center;
+}
+#div_likebutton button{
+    background-color: #1ed760;
+    border: none;
+    /* padding-left: 10%; */
+    /* align-items: center; */
+    /* border-radius: 20px */
+
+    
+}
+#div_likebutton button svg{
+    background-color: #1ed760;
+}
+#playlist_likesong:hover #div_likebutton {
+    display: block;
+}

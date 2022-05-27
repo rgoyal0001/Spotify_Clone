@@ -3,7 +3,7 @@
     padding: 0;
     /* color: white; */
     font-family: Helvetica,Arial,sans-serif;
-    color: white;
+    /* color: white; */
 }
 
 #side_bar{
@@ -31,7 +31,7 @@
 }
  .sidebar_div_a{
     text-decoration: none;
-    color: rgb(212, 42, 42);
+    color: rgb(177, 177, 177);
 } 
 .sidebar_div_a:hover{
     color: white;

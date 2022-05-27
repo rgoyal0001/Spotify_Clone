@@ -1,15 +1,15 @@
 var count=0
-document.getElementById("create_playlist").addEventListener("click",(e)=>{
-    e.preventDefault()
-    addplaylist(e)
+// document.getElementById("create_playlist").addEventListener("click",(e)=>{
+//     e.preventDefault()
+//     addplaylist(e)
     
-})
-async function addplaylist(event){
+// })
+async function addplaylist(){
     // event.preventDefault()
 
     count++
-    let pp=document.createElement("p")
-    pp=`My Playlist #${count}`
+    // let pp=document.createElement("p")
+    let pp=`My Playlist #`
      try {
      
     let body={
@@ -39,13 +39,14 @@ async function addplaylist(event){
 storinjson()
 async function storinjson()
 {
+    
     // event.preventDefault()
     
     // console.log(data)
    try {
+ 
     let playlist_cont=document.getElementById("palylist_container")
     playlist_cont.innerHTML=""
-    
   
     let res=await fetch(`http://localhost:3000/playlist`)
     let dataa=await res.json()
@@ -54,7 +55,7 @@ async function storinjson()
         let playlist=document.createElement("a")
         playlist.className=`playlistadd`
     
-    playlist.textContent=ele.Number_of_play_list
+    playlist.textContent=ele.Number_of_play_list+ele.id
     playlist_cont.append(playlist)
 
     });
