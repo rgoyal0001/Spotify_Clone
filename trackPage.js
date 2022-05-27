@@ -176,9 +176,9 @@ async function fetchSuggestion(trackData){
 function displaySuggestion(tracks){
 
     document.querySelector("#recommendedSongs").innerHTML=""
-    console.log(tracks)
-    tracks.forEach(track => {
 
+    tracks.forEach(track => {
+   
     let mainBox= document.createElement("div")
 
     let imgBox= document.createElement("div");
@@ -207,8 +207,69 @@ function displaySuggestion(tracks){
     let timeBox=document.createElement("div");
     timeBox.textContent=(track.duration_ms/60000).toFixed(2).toString().replace(".",":")  ;
 
+    let breakLine = document.createElement("br");
 
-    mainBox.append(imgBox,infoBox,timeBox)
+    let optionButton=document.createElement("button");
+    optionButton.textContent=" ··· "
+    
+    let optionBox1=document.createElement("div");
+    let optionBox=document.createElement("div");
+    let button1=document.createElement("button");
+    button1.textContent="Add to queue"
+    let button2=document.createElement("button");
+    button2.textContent="Go to song radio";
+    let button3=document.createElement("button");
+    button3.textContent="Go to artist";
+    let button4=document.createElement("button");
+    button4.textContent="Go to album";
+    let button5=document.createElement("button");
+    button5.textContent="show credits";
+    let button6=document.createElement("button");
+    button6.textContent="Add to Playlist";
+
+    button6.addEventListener("click",function(){
+        console.log(track.id)
+        addToPlaylist(track.id);
+
+            async function addToPlaylist(trackId){
+                try {
+                    let body={
+                        "trackId":trackId,
+                    }
+        
+                    let res=await fetch(`http://localhost:3000/playlistTrackId`,{
+                        method:"POST",
+                        body:JSON.stringify(body),
+                        headers:{
+                            "Content-Type":"application/json"
+                        }
+                    })
+                    hideOptions();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+    })
+
+    optionBox.append(button4,breakLine,breakLine,button6)
+
+    optionBox1.append(optionBox)
+
+            
+    function hideOptions() {
+        optionBox.style.display="none"
+    }
+
+    hideOptions();
+
+    function showOptions() {
+        optionBox.style.display="block"
+    }
+
+        optionButton.addEventListener("click",function(){
+            showOptions()
+        })
+    mainBox.append(imgBox,infoBox,timeBox,optionButton,optionBox1)
     document.querySelector("#recommendedSongs").append(mainBox);
 
   });
