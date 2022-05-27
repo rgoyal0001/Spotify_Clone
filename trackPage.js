@@ -91,6 +91,7 @@ function displayTrackData(tracks){
 
         button6.addEventListener("click",function(){
             console.log(track)
+            hideOptions();
             addToPlaylist(track);
 
             async function addToPlaylist(track){
@@ -120,7 +121,7 @@ function displayTrackData(tracks){
                         
                     // })
 
-                    hideOptions();
+                    
                 } catch (error) {
                     console.log(error);
                 }
@@ -242,6 +243,7 @@ function displaySuggestion(tracks){
 
     button6.addEventListener("click",function(){
         console.log(track)
+        hideOptions();
         addToPlaylist(track);
 
             async function addToPlaylist(trackId){
@@ -258,7 +260,6 @@ function displaySuggestion(tracks){
                             "Content-Type":"application/json"
                         }
                     })
-                    hideOptions();
                 } catch (error) {
                     console.log(error);
                 }
