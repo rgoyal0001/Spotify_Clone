@@ -1,4 +1,5 @@
 
+localStorage.setItem("authToken","BQDSgiCb9w36DEw_BjSDSycIkakAuMsXj5bsFyWS3KwdIlN8uBUnEvgtmMyLVTsSagpECAg8i2bVdEgAQGg3Xbr66GwnYl0j764eGt6KDBBlm_riQrNQd9gv0TiMWKE3cZaXqmxyXAtrXfA5GMpvyJli-Gw3KIq3rJE")
 
 let timerId;
 function debounce(fetchData,delay)
@@ -18,7 +19,7 @@ async function fetchData(inputData){
 
     try {
         
-        const authToken= "BQD0_CPssYym8dxZr8SCN9_IIm31mlL9SODxnuxZBGgKlzRxUKGp6e6kUSBlxGz1XnZ-lU6eTd92PfWN3zwl4XFlSIADFa80dbBtJ9zZdRG6gMhcPFyBowNxx3oM_LX_mTfgEdUWJYmOX9m1JNfcfrvcWdFB4BjRjrI"
+        const authToken= localStorage.getItem("authToken")
 
         let res= await fetch(`https://api.spotify.com/v1/search?q=${inputData}&type=track,artist,album,playlist,episode%2Cartist&market=IN&limit=6&offset=5`,{
         method:"GET",
@@ -44,7 +45,7 @@ async function fetchData(inputData){
         
         displayEpisodes(episodes.items)
         
-        console.log(tracks.items[0])
+        
         displayTopResult(tracks.items[0])
 
         displaySong(tracks.items)
@@ -70,13 +71,17 @@ function displayArtists(artists){
         let image=document.createElement("img");
         image.src=artist.images[0].url;
 
+        let nameDiv=document.createElement("div");
+
+
         let name=document.createElement("h3")
         name.textContent=artist.name;
+        nameDiv.append(name)
 
         let type=document.createElement("p")
         type.textContent=artist.type.charAt(0).toUpperCase() + artist.type.slice(1);
 
-        box.append(image,name,type);
+        box.append(image,nameDiv,type);
 
         document.querySelector("#artists").append(box)
     });
@@ -93,6 +98,29 @@ function displayAlbum(albums){
         
 
         let box= document.createElement("div");
+
+        box.addEventListener("click",function(){
+
+            console.log(album)
+            function AlbumInfo(images,name,release_date,albumType,total_tracks,artists){
+                this.img=images;
+                this.name=name;
+                this.release_date=release_date;
+                this.albumType=albumType;
+                this.totalTracks=total_tracks
+                this.artists=artists;
+            }
+            
+            let {images,name,release_date,album_type,total_tracks,artists}=album;
+            // console.log(images,name,release_date)
+            let albumInfo=new AlbumInfo(images,name,release_date,album_type,total_tracks,artists)
+            console.log(albumInfo);
+            localStorage.setItem("albumInfo",JSON.stringify(albumInfo));
+
+            localStorage.setItem("trackID",album.id);
+            window.location.href="trackPage.html"
+            // console.log()
+        })
 
         let image=document.createElement("img");
         image.src=album.images[0].url;
@@ -195,7 +223,7 @@ function  displayTopResult(track){
 }
 
 function displaySong(tracks){
-    console.log(tracks)
+   
     document.querySelector("#songs").innerHTML="";
     let count=0;
     tracks.forEach(track => {
@@ -227,7 +255,7 @@ function displaySong(tracks){
 
         let timeBox=document.createElement("div");
         timeBox.textContent=(track.duration_ms/60000).toFixed(2).toString().replace(".",":")  ;
-        console.log(track.duration_ms)
+        
         mainBox.append(imgBox,infoBox,timeBox)
 
         count++;
@@ -239,3 +267,4 @@ function displaySong(tracks){
         }
     });
 }
+
