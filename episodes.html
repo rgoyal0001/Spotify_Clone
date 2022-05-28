@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes</title>
+    <style>
+        
+        body{
+            font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
+            color: white;
+            background-color: black;
+        }
+   
+        #showHeader{
+            display: flex;
+            gap: 2%;
+             width: 85%;
+            margin-left: 15%;
+            /* border: 1px solid red; */
+            align-items:center;
+            padding-left: 1.5%;
+            padding-bottom: 1%;
+            background-color: rgb(120, 101, 52);
+        }
+        #showHeader>div{
+            /* border: 1px solid blue; */
+            margin-top: 7%;
+        }
+        #header_image {
+            /* border: 1px solid red; */
+            margin-top: 50%;
+            width: 17%;
+            height: 100%;
+        }
+        #header_image img{
+            width: 100%;
+            height: 80%;
+            margin-top: 20%;
+            border-radius: 7px;
+
+        }
+        #header_details {
+            padding-top: 8%;
+        }
+        #showHeader #name{
+            /* border: 1px solid red; */
+            font-size: 550%;
+            font-weight: 900;
+            margin-top: -1.5%;
+            margin-bottom: -1.5%;
+        }
+        #podcast{
+            font-weight: 400;
+        }
+        #publisher{
+            font-weight: 600;
+            font-size: 120%;
+        }
+        #follow{
+            /* border: 1px solid red; */
+
+            /* width: 85%; */
+            margin-top: 2%;
+            margin-left: 17%;
+        }
+        #followBtn{
+            border:1px ridge rgb(216, 209, 192);
+            padding: 8px 12px;
+            background-color: black;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: smaller;
+            font-weight: 550;
+        }
+        #followBtn:hover{
+            border: 1px solid white;
+        }
+        .episodesData{
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 1%;
+            justify-content: right;
+            flex-direction:row;
+            width: 85%;
+            margin-left: 15%;
+        }
+        .headElement{
+            padding: 2%;
+        }
+        
+        #episode{
+            display: flex;
+            gap: 1.2%;
+            margin-top: 20px;
+            height: fit-content;
+            border-radius: 7px;
+            padding: 2%;
+        }
+        h4{
+            margin: .5%;
+        }
+        h4:hover{
+            text-decoration: underline;
+        }
+        p{
+            font-size: 80%;
+        }
+        
+        #episode:hover{
+            cursor: pointer;
+            background-color: #232323;
+        }
+        #image{
+            /* border: 1px solid red; */
+            width: 8.2em;
+            height: 8.2em;
+            border-radius: 10px;
+        } 
+        #image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+        }
+        #episodeDetails{
+             /* border: 1px solid rgb(216, 22, 22);  */
+            width: 90%;
+        }
+        #episodeDetails p,#about{
+            /* border: 1px solid blue; */
+            color: rgb(175, 175, 175);
+            font-weight: 600;
+        }
+        #bottomInfo{
+            display: flex;
+            gap: 2%;
+            margin: auto;
+            align-items: center;
+             /* border: 1px solid red;  */
+        }
+        #bottomInfo img{
+            width: 7%;
+            height: 9%;
+            border-radius: 50%;
+        }
+        #bottomInfo img:hover{
+            transition: 0.7s;
+            opacity: 0.5;
+        }
+        
+        #abouts{
+            width: 45%;
+            padding: 2%;
+            /* border: 1px solid red; */
+            height: auto;
+        }
+      
+        .lessMore{
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-size: 100%;
+            font-weight: 900;
+            font-style: italic;
+            /* margin-top: 10%; */
+            /* border: 1px solid red; */
+        }
+        .lessMore:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div id="showHeader"></div>
+    <div id="follow">
+        <span id='followBtn' onclick="followButton()">FOLLOW</span>
+    </div>
+    <div class="episodesData">
+        <div id="episodes">
+                <h2 class="headElement">All Episodes</h2>
+
+        </div>
+        <div id="abouts">
+            <h2 class="headElement">About</h2>
+            <div id="about"></div>
+            
+            <span class="lessMore">see more</span>
+           
+        </div>
+    </div>
+    <!-- <img style="border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyLORMAL4RhEWPiFdfdSFbH8bV-OtVUfXSSQ&usqp=CAU"> -->
+</body>
+
+<script>
+    
+    const authToken=localStorage.getItem('authToken')?localStorage.getItem('authToken'):"";
+   // const authToken="BQBxx4wxcIaJV2GO7ZTS5rJUFatpPsoTHBmw8fvo_WJqSn5sM8YrvGTQrYIZbheSKD5OGPJa8gQQF2b75iyUv7npIE0BsKPFnf7rz39nVx1zraf6NgcQWSajau-O_66CyOqLKgeC_ILZUn2iRtV4ZVKctaeAoFrRpl0";
+    
+    async function fetchData(){
+         let id="1Iw0fZs9DzYcft0D6amarv";
+        // let id="5RXIcYoHDlpQx6VJNZyFV8"
+        //const id=localStorage.getItem('showId')?localStorage.getItem('showId'):"";
+
+        try { 
+            
+        
+            let res =await fetch(` https://api.spotify.com/v1/shows/${id}`,{
+                method:"GET",
+                headers:{
+                    "Accept":"application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${authToken}`,
+         
+                }
+            })
+
+            let data=await res.json();
+            console.log(data)
+            displayheader(data)
+            displayEpisodes(data.episodes.items)
+            displayAbout(data.description)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    fetchData()
+
+     function displayheader(data){
+        let header_image=document.createElement('div')
+        header_image.setAttribute('id','header_image')
+        let image=document.createElement('img')
+        image.src=data.images[0].url;
+        header_image.append(image)
+
+        let header_details=document.createElement('div')
+        header_details.setAttribute('id','header_details')
+        let podcast=document.createElement('p')
+        podcast.setAttribute('id','podcast')
+        podcast.textContent="PODCAST"
+        let name=document.createElement('h2')
+        name.setAttribute('id','name');
+        name.textContent=data.name;
+        let publisher=document.createElement('p')
+        publisher.setAttribute('id','publisher')
+        publisher.textContent=data.publisher;
+        header_details.append(podcast,name,publisher)
+
+        document.querySelector('#showHeader').append(header_image,header_details)
+     }
+
+     function followButton(){
+         if(document.getElementById('followBtn').innerHTML=="FOLLOW")
+        document.getElementById('followBtn').textContent='FOLLOWING'
+        else
+        document.getElementById('followBtn').textContent='FOLLOW'
+     }
+
+
+
+    function displayEpisodes(episodes){
+        episodes.forEach((episode)=>{
+
+            let box=document.createElement('div');
+            box.setAttribute('id','episode')
+            let image=document.createElement('div')
+            image.setAttribute('id','image')
+            let episodeDetails=document.createElement('div')
+            episodeDetails.setAttribute('id','episodeDetails')
+        
+            let img=document.createElement('img');
+            img.src=episode.images[0].url;
+
+            let name=document.createElement('h4')
+            name.setAttribute('id','name')
+            name.textContent=episode.name;
+            let description=document.createElement('p')
+            description.textContent=episode.description;
+
+            let maxLength=200;
+            if(episode.description.length>maxLength){
+            let newStr=episode.description.substring(0,maxLength);
+            let removeStr=episode.description.substring(maxLength,episode.description.length)
+            description.textContent=newStr+'...';
+        
+        
+        }
+
+            let bottomInfo=document.createElement('div')
+            bottomInfo.setAttribute('id','bottomInfo')
+
+            let playButton=document.createElement('img')
+            playButton.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAAflBMVEXn7fAAAAD////w9vnp7/Ls8vXx9Pb6+/z2+Pk8Pj84Ojvu9Pc7PT02ODnr8PPx+Pvh6OvY3uHP1dh6f4GprrGIjY8nKSoECQm8wsVtcnQIEBC1u75laWuutLZdYGJXXF9MUVOeo6dBRkiUmZwuMzSCh4rGzdAhIyQYGhufpKchxiTkAAAEsklEQVR4nO3dCXqbMBAFYI2MJZI0NPvepk3TNr3/BQsYs4pFQAx+M+8Eyv89SZiME6V7YkNjokAdeYLImND2/ayqE8IcvUI1gekEacewZumlf046PNowQrBOlBOEXhjh0uv97Lg5XBgWuBX7BK7N4sDYLr3Qw2Q7AMMuvcjDpVGOOgboFeKO6caIll7fYRN1YTA4OasJ2jHYWdQ0FG+LqoZiblHRKDCYnZ1FoiYGqzu1GlPHYPSs1YytYSy9nmVTxWC8SZKYMgbrTZLEljCY3qpFggID/l1Of8IcY+mVrCF7DCmG2lVDcX72LCfaYbC/SnaxKQbzZ4x9TIqx9CrWkgRDdkkWG2PILsliYgy5S7JEMcbSa1hPtJIjI49V8viZJ1RyfuYxglHEKLlM8kTqgO91tit/h3TI5W1vFZPRjwHZ3N0/bFZejoNlc070KOXYJcGgp2cpR5IUQ8qxS4ZBJOUoYdCLlKPAIPrGvRxlDHq54F2OCkZcjq+cy1HDoO8XZ0svabnUMVifHE0MemVbDgcG0Q3Tk8OJwbUcboy4HBxPjjYM+nHJrxytGEQ/2ZWjA4NfOTan7RjsytGNQW+sytGDQfSL0TNHLwadXG6WXuSh0o8Rl4PLyTEEg06veJRjEAaXcgzEoHMO5RiKQXR7Bl+O4Rj0foW+Vzww8MvhhUF3f6DL4YdB9HsL/NsEXwzocnhjIJdjBAb9RS3HGAyi6wCyHOMw4nIgfrIfiYFZjtEY9IE3GDceA3D2aQoGPYGVYxIGWjkmYtDTM9C1MhUDajBuOgbQ1OQcGDCDcbNgoAzGbb7MgoExGDdTMwhiMG6uZlAy+3TsJ8d8zYhzc+QaMzaDXi+PfKPMiHH8A5OzYSBMS86FAfGgMQ8GxFPGTBgQtVCzYKB8MpkB4x7mM+t0DKhXXdMwwF6CTsKAqkWczcloio8HkEskz3gMwF+pjd0mgL9PG40BWAs1cpugDmiMwbhGHd3xx0CthRqBgTvR5Y2BPOvniwE+IuyD8Y7+zQIPDPBaKA8MDt9GGorB4qtIwzBOGNRCDcRgUQs1COONzRdb+zEYfR++D4PVX0rowfjHpxaqB4NVLVQ3Bru/u9OOgTBj4JlWDHa1UK0YIDMGnnFjAIwxjokLg2ctlBMDZfTEPw0MnNET/9QxgEZP/FPFAPoizZiUMZAmkkalhIE2euKfHANyxsAze4xHyBkDz+wwpBZpUgzM0RP/xBjAMwae2dzBjp74J4D/S2Q+EQqJRCKRSCR8I09CeQLBKBLIvzUuEsk/vC6yFYwiRoVLL2E9CZVdegnriVV66SWsJ1ppuU6yRDGGnKBZTIwhh0YWG2PIoZFFJxiyT9KYFEP2SRqbYsh9kiTSOwx5CI0TZhhyhCq1c9BSjSRhjqHZv+EJdIHB/kKxJQzuzxpGlzGYn6G6isF6o9gaBueNYnQdg+9zaKSbGFzv10C7MHhqlCwqGBw1yhZVDH4aFYsaBrdTNNJdGLxuWKO7MTg9fdn6z97AYFOOei3cGNoyOEeDRi1aMBi87QmdP7YbI+YAbkfgpmjHiDcL6NlhXBukDyP1AHvuiDok+jBSkNCY6Oj3TBAZE3ZCJPkPqeU1/LXYil0AAAAASUVORK5CYII="
+           
+            let info=document.createElement('p')
+            function toMonthName(monthNumber) {
+                const date = new Date();
+                date.setMonth(monthNumber - 1);
+                return date.toLocaleString('en-US', {
+                month: 'short',
+                });
+            }
+            function millisToMinutesAndSeconds(millis) {
+                var minutes = Math.floor(millis / 60000);
+                var seconds = ((millis % 60000) / 1000).toFixed(0);
+                return minutes + " min " + (seconds < 10 ? '0' : '') + seconds + ' sec';
+            }
+            let mnth=toMonthName(episode.release_date.substring(5,7))
+            let duration=millisToMinutesAndSeconds(episode.duration_ms)
+
+            info.textContent=`${mnth} ${episode.release_date.substring(0,4)} • ${duration}`
+
+            image.append(img)
+            bottomInfo.append(playButton,info)
+            episodeDetails.append(name,description,bottomInfo)
+            box.append(image,episodeDetails)
+
+            document.querySelector('#episodes').append(box)
+            
+
+        })
+    }
+    
+    function displayAbout(data){
+        let about=document.getElementById('about')
+       // document.querySelector('#about').append(data)
+       
+        let maxLength=180;
+        if(data.length>maxLength){
+            let newStr=data.substring(0,maxLength);
+            let removeStr=data.substring(maxLength,data.length)
+            about.append(newStr+'...');
+    
+            document.querySelector('.lessMore').addEventListener('click',function(){
+
+                if(about.innerText.length < 185){
+                    about.innerText = data
+                    document.querySelector('.lessMore').innerHTML='see less'
+                } else {
+                    about.innerText=newStr+"...";
+                    document.querySelector('.lessMore').innerHTML='see more'
+                }
+                
+                
+            })
+        }
+        
+    }
+</script>
+</html>

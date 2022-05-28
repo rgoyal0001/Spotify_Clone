@@ -1,15 +1,17 @@
 body{
     background-color: black;
-    margin-left: 17%;
+
     margin-right: 50px;
     color: #b3b3b3;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
 
 }
-
+#up-bar{
+    margin-left: 17%;
+}
 #albumInfo{
     display: flex;
-
+    margin-left: 17%;
     /* border: 1px solid white; */
     color: aliceblue;
     padding: 30px;
@@ -53,7 +55,7 @@ body{
 }
 #albumInfo>div:nth-child(2)>div>h1{
     
-    margin: -5px 0px 9px 0px ;
+    margin: 5px 0px 9px 0px ;
     font-size: 2.7vw;
     font-size: 200%;
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
@@ -78,6 +80,7 @@ body{
     flex-direction: column;
     /* width: 140%; */
     position: sticky;
+    margin-left: 17%;
     
 }
 
@@ -131,7 +134,7 @@ body{
     /* color: red; */
     color: white;
     margin-top: 0px;
-    margin-bottom: -9px;
+    margin-bottom: 4px;
     /* margin-left: 5px; */
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
 }
@@ -156,12 +159,14 @@ body{
 }
 #title+div>h2{
     color: #FFFFFF;
+    margin: 18px 0px 20px 18%;
 }
 #recommendedSongs{
     /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     /* width: 140%; */
+    margin-left: 17%;
     
 }
 
@@ -208,7 +213,7 @@ body{
     /* color: red; */
     color: white;
     margin-top: 0px;
-    margin-bottom: -10px;
+    margin-bottom: 4px;
     /* margin-left: 5px; */
     font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
 }

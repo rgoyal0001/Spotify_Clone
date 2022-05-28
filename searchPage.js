@@ -1,19 +1,22 @@
 
-localStorage.setItem("authToken","BQDVkMFVD-LI4-h1mlUAjqsuE06tXR_uHeXroWklZktvSEMq3ngIhGWDRykrM69ObhaVGA-xtxfVIcvO6GFVdiu7-iMW28559pwg-QVRx4qPTJZLOcaW2LOr1OWDsfTTBdcrAFdIocpUOfHgBV23SGzfTJiZDUYL3i4")
+localStorage.setItem("authToken","BQBesw1LYsdoCSeEyX1WaXSaZRE5U2V9vFMdP5meT_M1Imn5JcGoGjc1Jo6AKypTNdqVjW5I6K4EEkFYoL9YEctBYpzzHT-3EnG9nEFUIyUdlY8YiiLf1g9hthm83psh2DtrNn_l7MbuaejM8cmFbOPKZnMIc1ITFZE")
 
 let timerId;
 function debounce(fetchData,delay)
 {
     if(timerId) clearTimeout(timerId);
-
+    let input= document.querySelector("#inputSearch").value;
+    
+    fetchData(input);
+    
     timerId=setTimeout(() => {
-        let input= document.querySelector("#inputSearch").value;
-
-        fetchData(input);
- 
     }, delay);
+    
 }
 
+let input= localStorage.getItem("searchInput")
+    
+    fetchData(input);
 
 async function fetchData(inputData){
 

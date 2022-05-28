@@ -91,12 +91,14 @@ function displayTrackData(tracks){
 
         button6.addEventListener("click",function(){
             console.log(track)
+            hideOptions();
             addToPlaylist(track);
 
             async function addToPlaylist(track){
+                console.log(track.id)
                 try {
                     let body={
-                        "trackId":track.id,
+                        "trackId":track.id
                         
                     }
                     
@@ -108,7 +110,18 @@ function displayTrackData(tracks){
                             "Content-Type":"application/json"
                         }
                     })
-                    hideOptions();
+
+              
+                    // let res=await fetch(`http://localhost:3000/playlist`,{
+                    //     method:"POST",
+                    //     body:JSON.stringify(body),
+                    // headers:{
+                    //         "Content-Type":"application/json"
+                    //     }
+                        
+                    // })
+
+                    
                 } catch (error) {
                     console.log(error);
                 }
@@ -230,6 +243,7 @@ function displaySuggestion(tracks){
 
     button6.addEventListener("click",function(){
         console.log(track)
+        hideOptions();
         addToPlaylist(track);
 
             async function addToPlaylist(trackId){
@@ -246,7 +260,6 @@ function displaySuggestion(tracks){
                             "Content-Type":"application/json"
                         }
                     })
-                    hideOptions();
                 } catch (error) {
                     console.log(error);
                 }

@@ -48,10 +48,7 @@ async function fetchData(trackId){
     
             let data= await res.json();
             // console.log(data.tracks.items);
-            // displayAlbumInfo(data)
-            
-            displayTracks(data);
-            // displayAlbumInfo(data)
+            // displayTracks(data);
             // console.log(data);
 
             // if(flag){
@@ -106,9 +103,9 @@ function displayTracks(track){
 }
 
 function displayAlbumInfo(track){
-    console.log("1")
+
     console.log(track);
-    let playlistinfo=document.getElementById("playlistInfo")
+
     let imgBox= document.createElement("div");
 
     let img=document.createElement("img");
