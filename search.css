@@ -1,0 +1,351 @@
+@media only screen and (max-width: 941px) {
+    #gridContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        /* background-color: rgb(226, 36, 36); */
+        padding-left: 20px;
+        height: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 1270px) and (min-width: 941px) {
+    #gridContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        /* background-color: rgb(226, 36, 36); */
+        padding-left: 20px;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1270px) {
+
+    #gridContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+        /* background-color: rgb(226, 36, 36); */
+        padding-left: 20px;
+        height: auto;
+    }
+}
+
+
+.body {
+    background-color: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: row;
+}
+
+
+#leftside {
+    /* background-color: rgb(231, 218, 218); */
+    width: 17%;
+    height: 1000px;
+}
+
+#rightside {
+    background-color: rgb(26, 25, 25);
+    width: 85%;
+
+}
+
+
+#browseall {
+    color: white;
+    margin-left: 30px;
+    margin-top: 100px;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif
+}
+
+
+#gridContainer div {
+    width: 190px;
+    height: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+#gridContainer img {
+    height: 90px;
+    width: 90px;
+    transform: rotate(25deg) translate(18%, -2%);
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+#gridContainer h3 {
+    color: white;
+    padding-left: 20px;
+    font-size: 22px;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif
+}
+
+#gridContainer>div {
+    background-color: rgb(39, 133, 106);
+}
+
+#gridContainer :nth-child(9) {
+    background-color: rgb(156, 240, 225);
+}
+
+#gridContainer :nth-child(10) {
+    background-color: rgb(215, 242, 125);
+}
+
+#gridContainer :nth-child(11) {
+    background-color: rgb(20, 138, 8);
+}
+
+#gridContainer :nth-child(12) {
+    background-color: rgb(96, 129, 8);
+}
+
+#gridContainer :nth-child(17) {
+    background-color: rgb(165, 103, 82);
+}
+
+#gridContainer :nth-child(22) {
+    background-color: rgb(96, 129, 8);
+}
+
+#gridContainer :nth-child(23) {
+    background-color: rgb(165, 103, 82);
+}
+
+#gridContainer :nth-child(28) {
+    background-color: rgb(50, 255, 101);
+}
+
+#gridContainer :nth-child(26) {
+    background-color: rgb(63, 165, 94);
+}
+
+#gridContainer :nth-child(22) {
+    background-color: rgb(185, 27, 125);
+}
+
+#gridContainer :nth-child(30) {
+    background-color: rgb(250, 108, 60);
+}
+
+#gridContainer :nth-child(31) {
+    background-color: rgb(235, 30, 50);
+}
+
+#gridContainer :nth-child(33) {
+    background-color: rgb(13, 115, 236);
+}
+
+#gridContainer :nth-child(34) {
+    background-color: rgb(248, 255, 153);
+}
+
+#gridContainer :nth-child(41) {
+    background-color: rgb(235, 30, 50);
+}
+
+#gridContainer :nth-child(54) {
+    background-color: rgb(235, 30, 50);
+}
+
+#gridContainer :nth-child(18) {
+    background-color: rgb(235, 30, 50);
+}
+
+#gridContainer :nth-child(19) {
+    background-color: rgb(13, 115, 236);
+}
+
+#gridContainer :nth-child(48) {
+    background-color: rgb(13, 115, 236);
+}
+
+#gridContainer :nth-child(20) {
+    background-color: rgb(140, 25, 50);
+}
+
+#gridContainer :nth-child(21) {
+    background-color: rgb(140, 25, 50);
+}
+
+#gridContainer :nth-child(59) {
+    background-color: rgb(140, 25, 50);
+}
+
+
+#gridContainer :nth-child(16) {
+    background-color: rgb(175, 40, 150);
+}
+
+#gridContainer :nth-child(27) {
+    background-color: rgb(175, 40, 150);
+}
+
+#gridContainer :nth-child(60) {
+    background-color: rgb(175, 40, 150);
+}
+
+
+#gridContainer :nth-child(2) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(6) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(15) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(24) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(35) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(36) {
+    background-color: rgb(30, 50, 100);
+}
+
+#gridContainer :nth-child(45) {
+    background-color: rgb(30, 50, 100);
+}
+
+
+
+#gridContainer :nth-child(3) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(5) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(7) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(13) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(14) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(25) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(32) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(37) {
+    background-color: rgb(141, 103, 171);
+}
+
+#gridContainer :nth-child(50) {
+    background-color: rgb(141, 103, 171);
+}
+
+
+#gridContainer :nth-child(4) {
+    background-color: rgb(232, 17, 91);
+}
+
+#gridContainer :nth-child(8) {
+    background-color: rgb(232, 17, 91);
+}
+
+#gridContainer :nth-child(29) {
+    background-color: rgb(232, 17, 91);
+}
+
+#gridContainer :nth-child(39) {
+    background-color: rgb(232, 17, 91);
+}
+
+#gridContainer :nth-child(51) {
+    background-color: rgb(232, 17, 91);
+}
+
+
+
+#gridContainer :nth-child(38) {
+    background-color: rgb(247, 157, 127);
+}
+
+#gridContainer :nth-child(40) {
+    background-color: rgb(102, 7, 16);
+}
+
+#gridContainer :nth-child(42) {
+    background-color: rgb(14, 229, 245);
+}
+
+#gridContainer :nth-child(43) {
+    background-color: rgb(243, 181, 187);
+}
+
+#gridContainer :nth-child(44) {
+    background-color: rgb(92, 30, 10);
+}
+
+#gridContainer :nth-child(46) {
+    background-color: rgb(14, 229, 245);
+}
+
+#gridContainer :nth-child(47) {
+    background-color: rgb(243, 181, 187);
+}
+
+#gridContainer :nth-child(49) {
+    background-color: rgb(92, 30, 10);
+}
+
+#gridContainer :nth-child(52) {
+    background-color: rgb(255, 23, 131);
+}
+
+#gridContainer :nth-child(53) {
+    background-color: rgb(252, 228, 11);
+}
+
+#gridContainer :nth-child(55) {
+    background-color: rgb(175, 44, 0);
+}
+
+#gridContainer :nth-child(56) {
+    background-color: rgb(252, 227, 117);
+}
+
+#gridContainer :nth-child(57) {
+    background-color: rgb(252, 228, 11);
+}
+
+#gridContainer :nth-child(58) {
+    background-color: rgb(248, 25, 25);
+}
+
+#gridContainer :nth-child(61) {
+    background-color: rgb(252, 227, 117);
+}
+
+#gridContainer :nth-child(62) {
+    background-color: rgb(16, 165, 133);
+}
+
+#gridContainer :nth-child(63) {
+    background-color: rgb(221, 138, 217);
+}
