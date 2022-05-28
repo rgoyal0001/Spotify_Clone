@@ -1,0 +1,54 @@
+{
+  "user_data": [
+    {
+      "user_email": "deepaksahu3698@gmail.com",
+      "user_conform_email": "deepaksahu3698@gmail.com",
+      "user_password": "123456789",
+      "user_profilename": "Deepak",
+      "uer_DOByear": "2000",
+      "user_DOBmonth": "February",
+      "user_DOBday": "29",
+      "user_gender": "Male",
+      "id": 1
+    },
+    {
+      "user_email": "deepak123@gmail.com",
+      "user_conform_email": "deepak123@gmail.com",
+      "user_password": "Deepak",
+      "user_profilename": "Deepak",
+      "uer_DOByear": "2000",
+      "user_DOBmonth": "February",
+      "user_DOBday": "15",
+      "user_gender": "Male",
+      "id": 2
+    },
+    {
+      "user_email": "",
+      "user_conform_email": "",
+      "user_password": "",
+      "user_profilename": "",
+      "uer_DOByear": "",
+      "user_DOBmonth": "Month",
+      "user_DOBday": "",
+      "user_gender": "Non-binary",
+      "id": 3
+    },
+    {
+      "user_email": "anyone@gmail.com",
+      "user_conform_email": "anyone@gmail.com",
+      "user_password": "123456789",
+      "user_profilename": "Anyone",
+      "uer_DOByear": "2000",
+      "user_DOBmonth": "February",
+      "user_DOBday": "29",
+      "user_gender": "Male",
+      "id": 4
+    }
+  ],
+  "playlist": [
+    
+  ],
+  "playlistTrackId": [
+    
+  ]
+}
