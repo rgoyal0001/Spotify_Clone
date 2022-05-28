@@ -7,8 +7,8 @@
 #like_song_cont{
     height: 450px;
     /* border: 1px solid rgb(96, 96, 138) ; */
-    /* margin-top:0px ; */
-    width:80% ;
+    margin-top:-140px ;
+    width:82% ;
     margin-left: 230px;
     background: rgb(2,0,36);
     background: linear-gradient(311deg, rgb(25, 21, 109) 0%, rgb(19, 19, 59) 35%, rgb(109, 105, 187) 100%);
@@ -93,86 +93,83 @@
 #song_name{
     margin-top: -450px;
 }
-#title{
+#display_song{
     /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     /* width: 140%; */
+    /* border: 1px solid gray; */
     
 }
-
-#title>div{
+.mainBox{
+    margin-top: 10px;
+    /* border: 1px solid gold; */
     display: flex;
-    margin-top: 5px;
-    /* justify-content: space-between; */
-    align-items: center;
-    /* padding: 0px 16px; */
+    flex-direction: row;
+    /* text-align: center; */
+    justify-content: space-between;
+    gap: 10px;
 }
-#title>div:hover{
+.imgBox{
+    margin-left: 20px;
+}
+.imgBox img{
+    
+    height: 50px;
+    width: 50px;
+}
+.infoBox{
+    /* border: 1px solid green; */
+    /* margin-left: 10px; */
+    margin-right: 550px;
+    width: 40%;
+    font-size: 15px;display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.infoBox h3{
+    font-size: 15px;
+
+}
+.infoBox p{
+    font-size: 13px;
+    margin-top: 5px;
+    color: gray;
+}
+.mainBox:hover{
     cursor: pointer;
     background-color: #232323;
 }
-#title>div>div{
-    padding: 2px;
-}
-
-#title>div>div:nth-child(1){
-    /* border: 1px solid; */
-    width: 5%;
-}
-#title>div>div:nth-child(2){
-    width: 87%;
-}
-#title>div>div:nth-child(3){
-    font-size: 14px;
-    
-    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
-
-}
 
 
 
-#title img{
-    width: 2.5rem;
-    margin-top: 5px;
-    margin-left: 5px;
-    
-    /* display: block; */
-}
-
-#title h3{
-    font-size: 15px;
-    /* color: red; */
-    color: white;
-    margin-top: 0px;
-    margin-bottom: -10px;
-    /* margin-left: 5px; */
-    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
-}
-
-#title p{
-    font-size: 13px;
-    /* margin-left: 5px; */
-    margin-top: 15px;
-    color: #b3b3b3;
-    font-family:  var(--font-family,spotify-circular),Helvetica,Arial,sans-serif;
-}
 .likesong_id
 {
-    border: 1px solid rebeccapurple
+    /* border: 1px solid rebeccapurple; */
     /* display: ; */
+margin-left: 20px;
+margin-top: 10px;
+font-size: 20px;
 }
 
 #titleHead{
-    border-bottom: 0.5px solid #515151;
+    /* border-bottom: 0.5px solid #515151; */
     margin-bottom: 5px;
     /* padding-bottom: 150px; */
+    display: flex;
+    /* gap: ; */
 }
 
-#titleHead>div:nth-child(1){
-    text-align: center;
-}
-#titleHead:hover{
-    
-    background-color: black !important;
+
+.timeBox{
+    /* border: 1px solid green; */
+    /* margin-left: 520px; */
+    margin-right: 120px;
+    left: 5%;
+    width: auto;
+    font-size: 15px;display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
