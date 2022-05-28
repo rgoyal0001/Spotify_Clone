@@ -15,6 +15,7 @@
     justify-content: start;
     align-items: center;
     flex-direction:column;
+    overflow:visible;
     
 }
 .sidebar_div{
