@@ -3,7 +3,7 @@ import navBar from "../component/getNavbar.js"
 
 document.getElementById("up-bar").innerHTML = navBar();
 
-localStorage.setItem("authToken",JSON.stringify("BQDyRKbNQOyzeSoKdhRWkx-BHtS2Vy05NrsJIx4BN0Rq6tq3GJop5gDjsLtyisN4q-k7HJu1K72MFhwdc0neEAYaxeEfnQdW8Qg_97Q7vJ5fyEm2HzidoEprsGEy3n4PcsjJrgh74akVPazHgYAjDHwA9OtvEt4YVdkuoQSV5WWNyKHVhmx-"))
+localStorage.setItem("authToken",JSON.stringify("BQBPWdYVSr_SZY0ExvR4xK7BSukLGDUiUDwlY2rqjtUlNxg2DFo6nVVY_xWgT3H9w4BqZuP6lGd6MvWAfiWMNKixjNTx1RFkhQcdIC-0REH9q9Z3F2xAG_59ToNaomhGbzG-SRv7-TdCsdxMIpmMC8pqCpQWq9ayuNA"))
 
 let authToken = JSON.parse(localStorage.getItem("authToken"));
 
@@ -14,7 +14,7 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
             //  genre = https://api.spotify.com/v1/recommendations/available-genre-seeds
 
 
-            let res = await fetch(`https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=10&offset=5`, {
+            let res = await fetch(`https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=4&offset=5`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

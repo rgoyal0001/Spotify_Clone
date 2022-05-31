@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="homePage.css">
     <link rel="stylesheet" href="../upBar/upbar.css">
     <link rel="stylesheet" href="../web_player/sidewebplayer.css">
+    <link rel="stylesheet" href="../Music player/music.css">
 </head>
 
 <body>
@@ -19,10 +20,106 @@
     </div>
         <!-- <div id="bigContainer"> -->
         
-    <div id="container">
-    <!-- </div> -->
-        <!-- <div id="playlists"></div> -->
-    </div>
+            <div id="main_cont">
+
+                <div id="side_bar">
+                    <div id="side_image">
+                        <img src="../web_player/Screenshot 2022-05-22 102301.png" alt="">
+                    </div>
+                    <div id="side_home" class="sidebar_div">
+                        <img src="../web_player/home.png" alt="">
+                      <a href="./homePage.html" class="sidebar_div_a" style="background: none;"> <b>Home</b></a> 
+                    </div>
+                    <div id="side_search" class="sidebar_div">
+                        <img src="../web_player/search.png" alt="">
+                       <a href="../searchPage.html" class="sidebar_div_a"><b>Search</b></a> 
+                    </div>
+                    <div id="side_library" class="sidebar_div">
+                        <img src="../web_player/playlist.png" alt="">
+                        <a href="../libary/libary.html" class="sidebar_div_a"><b> Your Library</b></a> 
+                    </div>
+                    <div id="side_playlist" class="sidebar_div">
+                        <img src="../web_player/Screenshot 2022-05-26 170202.png" alt="">
+                       <a id="create_playlist" onclick="addplaylist()"><b>Create Playlist</b> </a>
+                    </div>
+                    <div id="side_like" class="sidebar_div">
+                        <img src="../web_player/line.png" alt="">
+                        <a href="../likepage/like_page.html" class="sidebar_div_a"><b> Liked Songs</b></a> 
+                    </div>
+                   <div id="br"></div>
+                  <div id="palylist_container">
+            
+                   </div>
+            
+                </div>
+                <div id="container">
+                    <!-- </div> -->
+                        <!-- <div id="playlists"></div> -->
+                    </div>
+                    <div id="player">
+                        <div id="playerContainer">
+                            <audio src="" id="audio"></audio>
+                            <div id="leftDiv">
+                                <div id="trackImgDiv">
+                                    <img id="trackImg" src="https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png"
+                                        alt="">
+                                </div>
+                                <div id="trackTitle">
+                                    <h3 id="trackH3">Title</h3>
+                                    <p id="singerName">Singer Name</p>
+                                </div>
+                                <img src="https://img.icons8.com/material-outlined/24/000000/filled-like.png" />
+                            </div>
+                            <div id="middileDiv">
+                                <div id="playerButtons">
+                                    <div id="backButton">
+                                        <?xml version="1.0" ?><svg style="enable-background:new 0 0 32 32;" version="1.1"
+                                            viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path
+                                                d="M23.4,8.1c-0.3-0.2-0.8-0.1-1.1,0.1L15,14V9c0-0.6-0.4-1-1-1H9C8.4,8,8,8.4,8,9v14c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5  l7.4,5.7c0.2,0.1,0.4,0.2,0.6,0.2c0.1,0,0.3,0,0.4-0.1c0.3-0.2,0.6-0.5,0.6-0.9V9C24,8.6,23.8,8.3,23.4,8.1z" />
+                                        </svg>
+                                    </div>
+                                    <div id="playPouseButtonDiv">
+                                        <button id="playPouseButton">
+                                            <img id="pouseImg"
+                                                src="https://icon-library.com/images/play-icon-png-transparent/play-icon-png-transparent-28.jpg"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                    <div id="forwardButton">
+                                        <!-- <img src="https://img.icons8.com/ios-glyphs/30/000000/end--v1.png"/> -->
+                                        <?xml version="1.0" ?><svg id="Icons" style="enable-background:new 0 0 32 32;" version="1.1"
+                                            viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path
+                                                d="M23,8h-5c-0.6,0-1,0.4-1,1v5L9.6,8.2C9.3,8,8.9,7.9,8.6,8.1C8.2,8.3,8,8.6,8,9v14c0,0.4,0.2,0.7,0.6,0.9C8.7,24,8.9,24,9,24  c0.2,0,0.4-0.1,0.6-0.2L17,18v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1V9C24,8.4,23.6,8,23,8z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div id="playerLineDiv">
+                                    <div id="currentTimeing">00:00</div>
+                                    <div id="playerLine">
+                                        <input type="range" id="trackRange" min="0" value="0" max="100">
+                                    </div>
+                                    
+                                    <div id="songTimeing"></div>
+                                </div>
+                            </div>
+                            <div id="rightDiv">
+                                <div>
+                                    <img src="https://www.nicepng.com/png/detail/203-2039502_volume-icon.png" alt="">
+                                </div>
+                                <div id="valumeDiv">
+                                    <input type="range" id="valumeRange" min="0" value="0" max="100">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+    
 </body>
 
 </html>
@@ -32,3 +129,4 @@
 
 </script>
 <script src="../navBar/upbar.js" type="module"></script>
+<script src="../Music player/music.js"></script>

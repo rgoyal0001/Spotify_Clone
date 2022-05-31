@@ -1,8 +1,6 @@
 
 import navBar from "../component/getNavbar.js";
 
-document.getElementById("up-bar").innerHTML = navBar();
-
 
 
 let locationHref = JSON.parse(localStorage.getItem("locationHref")) || [];
