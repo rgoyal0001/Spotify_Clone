@@ -8,12 +8,50 @@
     <title>Document</title>
     <!-- <link rel="shortcut icon" href="#"> -->
     <link rel="stylesheet" href="./search.css">
+    <link rel="stylesheet" href="./upbar.css">
 </head>
 
 <body class="body">
 
-    <div id="leftside"></div>
+    <div id="side_bar">
+        <div id="side_image">
+            <img src="Screenshot 2022-05-22 102301.png" alt="">
+        </div>
+        <div id="side_home" class="sidebar_div">
+            <img src="home.png" alt="">
+          <a href="" class="sidebar_div_a"> <b>Home</b></a> 
+        </div>
+        <div id="side_search" class="sidebar_div">
+            <img src="search.png" alt="">
+           <a href="" class="sidebar_div_a"><b>Search</b></a> 
+        </div>
+        <div id="side_library" class="sidebar_div">
+            <img src="playlist.png" alt="">
+            <a href="" class="sidebar_div_a"><b> Your Library</b></a> 
+        </div>
+        <div id="side_playlist" class="sidebar_div">
+            <img src="Screenshot 2022-05-26 170202.png" alt="">
+           <a id="create_playlist" onclick="addplaylist()"><b>Create Playlist</b> </a>
+        </div>
+        <div id="side_like" class="sidebar_div">
+            <img src="line.png" alt="">
+            <a href="" class="sidebar_div_a"><b> Liked Songs</b></a> 
+        </div>
+       <div id="br"></div>
+      <div id="palylist_container">
+
+       </div>
+
+    </div>
+
     <div id="rightside">
+
+        <div id="up-bar">
+
+            
+       
+        </div>
+        <input oninput="debounce(storeInput,2000)" type="text" placeholder="Artists, songs,or podcasts" id="inputSearch">
 
         <h2 id="browseall">Browse all</h2>
 
@@ -26,8 +64,5 @@
 </body>
 
 </html>
-<script src="./search.js">
-
-
-
-</script>
+<script src="./search.js"></script>
+<script src="./upbar.js" type="module"></script>
