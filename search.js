@@ -1,6 +1,25 @@
 
 
-let accessToken = "BQCGmEqnY4rIUzr8v3n2t-q-59pr-qne5589StwJ0Sbj8CfUDfKMo0G-9js1-9NbwzkcVSpja9uqH8bhBcr-actc5LH7p52UdgCjUB3szd8o2w2lupI9iMCDA7u1pRfz5plaiwefFqFFqsUNU2O_CIP5yCjr1cjHCt4"
+let accessToken = "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un"
+
+
+let timerId;
+        function debounce(fetchData,delay){
+            if(timerId) clearTimeout(timerId);
+        timerId=setTimeout(() => {
+            let input= document.querySelector("#inputSearch").value;
+    
+            fetchData(input);
+     
+        }, delay);
+        }
+    
+        function fetchData(input){
+            localStorage.setItem("searchInput",input);
+            
+
+            window.location.href="searchPage.html"
+        }
 
 async function getdata(){
 try {
@@ -15,7 +34,7 @@ try {
             })
 
             let data = await res.json();
-            //console.log(data.categories.items);
+
             appendData(data.categories.items)
     
 } catch (error) {
@@ -51,6 +70,6 @@ categories.forEach(element => {
 
 function showPlaylist(id){
     localStorage.setItem("catID",id)
-    window.location.href = "http://127.0.0.1:5500/playlist.html"
+    window.location.href = "playlist.html"
 }
 

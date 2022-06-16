@@ -1,5 +1,5 @@
 
-localStorage.setItem("authToken","BQBesw1LYsdoCSeEyX1WaXSaZRE5U2V9vFMdP5meT_M1Imn5JcGoGjc1Jo6AKypTNdqVjW5I6K4EEkFYoL9YEctBYpzzHT-3EnG9nEFUIyUdlY8YiiLf1g9hthm83psh2DtrNn_l7MbuaejM8cmFbOPKZnMIc1ITFZE")
+localStorage.setItem("authToken","BQDS9iZ37Rlc2Sigj7SsZ4o84e1tUqbtV8WMRxxPnx4LViiqNeI0VBOXNKWUQR9f8_650jv-PS2l-88orDxZ5R0V6NgWzDuCyVWGBB7k-NY7U7g9hG5HCXnaDk1yZClxPoYUx5DF1S6EvDItMmvXw6ivdTzsZ8CcgJEtBDmP0nprv8rvHPl_mIZIruaRAI7ZIRAV")
 
 let timerId;
 function debounce(fetchData,delay)
@@ -23,6 +23,7 @@ async function fetchData(inputData){
     try {
         
         const authToken= localStorage.getItem("authToken")
+        // const authToken= "BQDS9iZ37Rlc2Sigj7SsZ4o84e1tUqbtV8WMRxxPnx4LViiqNeI0VBOXNKWUQR9f8_650jv-PS2l-88orDxZ5R0V6NgWzDuCyVWGBB7k-NY7U7g9hG5HCXnaDk1yZClxPoYUx5DF1S6EvDItMmvXw6ivdTzsZ8CcgJEtBDmP0nprv8rvHPl_mIZIruaRAI7ZIRAV"
 
         let res= await fetch(`https://api.spotify.com/v1/search?q=${inputData}&type=track,artist,album,playlist,episode%2Cartist&market=IN&limit=6&offset=5`,{
         method:"GET",
