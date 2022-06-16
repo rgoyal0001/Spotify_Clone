@@ -6,111 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music player</title>
+    <link rel="stylesheet" href="./music.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        #playerContainer {
-            border: 1px solid black;
-            padding: 10px;
-            display: flex;
-        }
-
-        img {
-            width: 65px;
-
-        }
-
-        #leftDiv {
-            display: flex;
-            width: 20%;
-            height: 70px;
-        }
-
-        #playerButtons {
-            display: flex;
-        }
-        #trackImgDiv{
-            height: 100%;
-        }
-        #trackImgDiv > img{
-            height: 100%;
-    width: 100%;
-        }
-
-        #playerButtons svg {
-            height: 30px;
-            width: 30px;
-        }
-
-        #trackTitle {
-            margin: 20px 17px;
-        }
-
-        #leftDiv>img {
-            /* height: 100%; */
-            width: 30px;
-            margin: 20px;
-        }
-
-        #middileDiv {
-            width: 60%;
-        }
-
-        #playerButtons {
-            margin: 10px 44%
-        }
-
-        #playerLine {
-            width: 80%;
-            height: 5px;
-            margin: 5px 10%;
-            background-color: #a19292;
-            border-radius: 50px;
-        }
-        #playerLine > input{
-            width: 100%;
-        }
-
-        #rightDiv {
-            width: 20%;
-            display: flex;
-        }
-        #rightDiv > div{
-            height: 24px;
-    width: 26px;
-    margin-top: 24px;
-        }
-        #rightDiv > div:nth-child(1){
-            /* border: 1px solid red; */
-            margin-left: 35%;
-            /* margin: 1000px; */
-        }
-        #rightDiv > div > img{
-            width: 100%;
-        }
-        #valumeDiv > div{
-            margin-top: 10px;
-    border-radius: 50px;
-    margin-left: 10px;
-    height: 5px;
-    width: 109px;
-    background-color: #c2bdbd;
-        }
+        
     </style>
 </head>
 
 <body>
     <div id="playerContainer">
+        <audio src="" id="audio"></audio>
         <div id="leftDiv">
             <div id="trackImgDiv">
-                <img src="https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png" alt="">
+                <img id="trackImg" src="https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png"
+                    alt="">
             </div>
             <div id="trackTitle">
-                <h3>Title</h3>
-                <p>Singer Name</p>
+                <h3 id="trackH3">Title</h3>
+                <p id="singerName">Singer Name</p>
             </div>
             <img src="https://img.icons8.com/material-outlined/24/000000/filled-like.png" />
         </div>
@@ -124,22 +36,12 @@
                             d="M23.4,8.1c-0.3-0.2-0.8-0.1-1.1,0.1L15,14V9c0-0.6-0.4-1-1-1H9C8.4,8,8,8.4,8,9v14c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5  l7.4,5.7c0.2,0.1,0.4,0.2,0.6,0.2c0.1,0,0.3,0,0.4-0.1c0.3-0.2,0.6-0.5,0.6-0.9V9C24,8.6,23.8,8.3,23.4,8.1z" />
                     </svg>
                 </div>
-                <div id="playPouseButton">
-                    <div id="trackPouse">
-                        <?xml version="1.0" ?>
-                        <!DOCTYPE svg
-                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
-                            height="512px" id="Layer_1" style="enable-background:new 0 0 50 50;" version="1.1"
-                            viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g>
-                                <path
-                                    d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z" />
-                                <path
-                                    d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z" />
-                            </g>
-                        </svg>
-                    </div>
+                <div id="playPouseButtonDiv">
+                    <button id="playPouseButton">
+                        <img id="pouseImg"
+                            src="https://icon-library.com/images/play-icon-png-transparent/play-icon-png-transparent-28.jpg"
+                            alt="">
+                    </button>
                 </div>
                 <div id="forwardButton">
                     <!-- <img src="https://img.icons8.com/ios-glyphs/30/000000/end--v1.png"/> -->
@@ -152,23 +54,24 @@
                 </div>
             </div>
             <div id="playerLineDiv">
-                <div></div>
+                <div id="currentTimeing">00:00</div>
                 <div id="playerLine">
                     <input type="range" id="trackRange" min="0" value="0" max="100">
                 </div>
-                <div></div>
+                
+                <div id="songTimeing"></div>
             </div>
         </div>
         <div id="rightDiv">
             <div>
-                <img src="https://png.pngtree.com/png-clipart/20190905/original/pngtree-white-volume-icon-png-image_4541974.jpg"
-                    alt="">
+                <img src="https://www.nicepng.com/png/detail/203-2039502_volume-icon.png" alt="">
             </div>
             <div id="valumeDiv">
+                <input type="range" id="valumeRange" min="0" value="0" max="100">
                 <div></div>
             </div>
         </div>
     </div>
 </body>
-
+<script src="./music.js"></script>
 </html>

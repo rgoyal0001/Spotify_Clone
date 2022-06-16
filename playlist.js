@@ -1,5 +1,9 @@
+
 let accessToken =
   "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un";
+=======
+let accessToken = "BQCWYZya-LkmBKs0BnaKVsws0SIwRn-qJWeLvnWqRNA-d94y8-bq_zDt2i3qJ0XSilFkZn0XjjZne5MwgO5fLkP0gipg6diMgAf7XNZd99l6mHUCZ30ns1IKYBidBkYne1UxfFqLgHZEkPdf8OgP6oVGU1Vsv9qmZgc"
+
 
 async function getPlaylistdata(id) {
   try {
@@ -22,8 +26,19 @@ async function getPlaylistdata(id) {
   }
 }
 
+
 var id = localStorage.getItem("catID");
 getPlaylistdata(id);
+
+var loc = localStorage.getItem("cat")
+var cat = loc.split(",")
+let id = cat[0]
+getPlaylistdata(id)
+
+let cat_name = cat[1]
+document.getElementById("categoryheader").textContent = cat_name
+
+
 
 // function appendData(playlists){
 

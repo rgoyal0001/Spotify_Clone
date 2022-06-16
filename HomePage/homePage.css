@@ -2,16 +2,21 @@
     margin: 0;
     padding: 0;
     font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    /* background-color: black; */
 }
-
+body{
+    background-color: black;
+}
 #container {
     /* display: flex; */
     /* flex-direction: row; */
     background-color: #212020;
     ;
-    margin-left: 16%;
+    margin-left: 17%;
     /* margin-top: 5%; */
     width: 84%;
+    overflow:visible;
+    z-index: -1;
 }
 
 .playlists {

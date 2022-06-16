@@ -1,5 +1,7 @@
 
-localStorage.setItem("authToken","BQDS9iZ37Rlc2Sigj7SsZ4o84e1tUqbtV8WMRxxPnx4LViiqNeI0VBOXNKWUQR9f8_650jv-PS2l-88orDxZ5R0V6NgWzDuCyVWGBB7k-NY7U7g9hG5HCXnaDk1yZClxPoYUx5DF1S6EvDItMmvXw6ivdTzsZ8CcgJEtBDmP0nprv8rvHPl_mIZIruaRAI7ZIRAV")
+
+localStorage.setItem("authToken","BQBPWdYVSr_SZY0ExvR4xK7BSukLGDUiUDwlY2rqjtUlNxg2DFo6nVVY_xWgT3H9w4BqZuP6lGd6MvWAfiWMNKixjNTx1RFkhQcdIC-0REH9q9Z3F2xAG_59ToNaomhGbzG-SRv7-TdCsdxMIpmMC8pqCpQWq9ayuNA")
+
 
 let timerId;
 function debounce(fetchData,delay)

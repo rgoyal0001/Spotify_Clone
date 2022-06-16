@@ -6,9 +6,8 @@
 #up-bar {
     display: flex;
     height: 60px;
-    background-color: rgb(43, 40, 40);
+    background-color: rgb(24, 24, 28);
     color: aliceblue;
-    margin-left: 17%;
 }
 
 #arrow,
