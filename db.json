@@ -45,6 +45,20 @@
       "id": 4
     },
     {
+
+      "user_email": "rajesh@gmail.com",
+      "user_conform_email": "rajesh@gmail.com",
+      "user_password": "1234",
+      "user_profilename": "dsfa",
+      "uer_DOByear": "2001",
+      "user_DOBmonth": "May",
+      "user_DOBday": "22",
+      "user_gender": "Male",
+      "id": 5
+    }
+  ],
+  "playlist": []
+
       "user_email": "deepaksahu1234@gmail.com",
       "user_conform_email": "deepaksahu1234@gmail.com",
       "user_password": "1010",
@@ -83,4 +97,5 @@
       "id": 2
     }
   ]
+
 }
