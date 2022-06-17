@@ -1,9 +1,4 @@
-
-let accessToken =
-  "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un";
-=======
-let accessToken = "BQCWYZya-LkmBKs0BnaKVsws0SIwRn-qJWeLvnWqRNA-d94y8-bq_zDt2i3qJ0XSilFkZn0XjjZne5MwgO5fLkP0gipg6diMgAf7XNZd99l6mHUCZ30ns1IKYBidBkYne1UxfFqLgHZEkPdf8OgP6oVGU1Vsv9qmZgc"
-
+let accessToken =JSON.parse(localStorage.getItem("authToken"));
 
 async function getPlaylistdata(id) {
   try {

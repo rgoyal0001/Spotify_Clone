@@ -1,10 +1,26 @@
+const clientId = "e358f27f1cf744e49b880aaf0807be8c";
+const clientSecret = "4204725dea5941b2a7c17ab60372d054";
+// let authToken;
+const _getToken = async () => {
+    const result = await fetch(`https://accounts.spotify.com/api/token`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ":" + clientSecret)
+        },
+        body: 'grant_type=client_credentials'
+    });
+
+    const data = await result.json();
+    // authToken=data.access_token
+        localStorage.setItem("authToken", JSON.stringify(data.access_token) )
+    console.log(data.access_token)
+}
+_getToken()
 
 
-
-let accessToken = "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un"
-
-
-let timerId;
+const accessToken= JSON.parse(localStorage.getItem("authToken"))
+    let timerId;
         function debounce(fetchData,delay){
             if(timerId) clearTimeout(timerId);
         timerId=setTimeout(() => {
@@ -49,23 +65,23 @@ try {
 getdata()
 
 // search bar
-let timerId;
-        function debounce(storeInput,delay){
-            if(timerId) clearTimeout(timerId);
-        timerId=setTimeout(() => {
-            let input= document.querySelector("#inputSearch").value;
+// let timerId;
+//         function debounce(storeInput,delay){
+//             if(timerId) clearTimeout(timerId);
+//         timerId=setTimeout(() => {
+//             let input= document.querySelector("#inputSearch").value;
     
-            storeInput(input);
+//             storeInput(input);
      
-        }, delay);
-        }
+//         }, delay);
+//         }
     
-        function storeInput(input){
-            localStorage.setItem("searchInput",input);
+//         function storeInput(input){
+//             localStorage.setItem("searchInput",input);
             
 
-            window.location.href="searchPage.html"
-        }
+//             window.location.href="searchPage.html"
+//         }
 
 
 function appendData(categories){

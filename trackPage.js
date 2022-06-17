@@ -7,7 +7,7 @@ async function fetchTrackData(){
     // console.log(id)
     try {
         
-        const authToken= localStorage.getItem("authToken")
+        const authToken= JSON.parse(localStorage.getItem("authToken"));
 
         let res= await fetch(`https://api.spotify.com/v1/albums/${id}/tracks`,{
         method:"GET",
