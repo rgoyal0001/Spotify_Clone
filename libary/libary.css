@@ -9,7 +9,7 @@
     margin-top: 30px;
     height: auto;
     width: 80%;
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     /* margin-right: 0px; */
     margin-left: 230px;
 }
@@ -28,7 +28,7 @@
     height: 250px;
     width: 40%;
     position: relative;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     border-radius: 5px;
     /* z-index: -1; */
@@ -53,7 +53,7 @@
 #playlistdisplay{
     margin-top: 30px;
     height: 250px;
-    border: 1px solid rgb(19, 102, 150);
+    /* border: 1px solid rgb(19, 102, 150); */
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -62,11 +62,11 @@
 .playlistdiv{
     height: 70px;
     width: 10%;
-    border: 1px solid red;
-    background-color: green;
+    /* border: 1px solid red; */
+    /* background-color: green; */
 }
 .single_playlist{
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     width: 30%;
     background-color: rgb(32, 30, 30);
     margin:0px 10px;

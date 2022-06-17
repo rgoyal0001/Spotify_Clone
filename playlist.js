@@ -21,8 +21,19 @@ async function getPlaylistdata(id) {
   }
 }
 
+
 var id = localStorage.getItem("catID");
 getPlaylistdata(id);
+
+var loc = localStorage.getItem("cat")
+var cat = loc.split(",")
+let id = cat[0]
+getPlaylistdata(id)
+
+let cat_name = cat[1]
+document.getElementById("categoryheader").textContent = cat_name
+
+
 
 // function appendData(playlists){
 

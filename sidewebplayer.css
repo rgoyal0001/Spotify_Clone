@@ -15,7 +15,6 @@
     justify-content: start;
     align-items: center;
     flex-direction:column;
-    overflow:visible;
     
 }
 .sidebar_div{
@@ -29,20 +28,12 @@
     color: gray;
     margin-left: 10px;
     font-size: 15px;
-    background: none;
 
-}
-.sidebar_div b{
-    background: none;
 }
  .sidebar_div_a{
     text-decoration: none;
     color: rgb(177, 177, 177);
-    background: none;
 } 
-#side_image{
-    background: none;
-}
 .sidebar_div_a:hover{
     color: white;
 }
@@ -59,14 +50,11 @@
     cursor: pointer;
     margin-left: -35px;
     /* gap: 20px; */
-    background: none;
     
 }
 
-#palylist_container
-{
-    background: none;
-}
+
+
 .playlistadd a{
     color: green;
 }
@@ -79,7 +67,4 @@ color: white
     width: 10%;
     border: 1px solid red;
     background-color: green;
-}      
-#create_playlist{
-    background: none;
-} 
+}

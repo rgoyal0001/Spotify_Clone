@@ -9,9 +9,9 @@
     /* display: flex; */
     /* flex-direction: row; */
     background-color: #212020;
-    margin-left: 16%;
+    /* margin-left: 16%; */
     /* margin-top: 5%; */
-    width: 84%;
+    width: 100%;
 }
 
 .playlists {

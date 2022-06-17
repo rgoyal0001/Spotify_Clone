@@ -20,7 +20,7 @@ _getToken()
 
 
 const accessToken= JSON.parse(localStorage.getItem("authToken"))
-let timerId;
+    let timerId;
         function debounce(fetchData,delay){
             if(timerId) clearTimeout(timerId);
         timerId=setTimeout(() => {
@@ -37,6 +37,7 @@ let timerId;
 
             window.location.href="searchPage.html"
         }
+
 
 async function getdata(){
 try {
@@ -63,6 +64,26 @@ try {
 
 getdata()
 
+// search bar
+// let timerId;
+//         function debounce(storeInput,delay){
+//             if(timerId) clearTimeout(timerId);
+//         timerId=setTimeout(() => {
+//             let input= document.querySelector("#inputSearch").value;
+    
+//             storeInput(input);
+     
+//         }, delay);
+//         }
+    
+//         function storeInput(input){
+//             localStorage.setItem("searchInput",input);
+            
+
+//             window.location.href="searchPage.html"
+//         }
+
+
 function appendData(categories){
 
     let gridContainer = document.getElementById("gridContainer")
@@ -79,7 +100,7 @@ categories.forEach(element => {
     gridContainer.append(div)
 
     div.addEventListener("click", function(){
-        showPlaylist(element.id);
+        showPlaylist([element.id, element.name]);
     }, false);
 });
 
@@ -88,5 +109,6 @@ categories.forEach(element => {
 function showPlaylist(id){
     localStorage.setItem("catID",id)
     window.location.href = "playlist.html"
+
 }
 

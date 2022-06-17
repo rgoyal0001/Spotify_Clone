@@ -68,7 +68,7 @@ function displayTracks(track){
     // document.querySelector("#title").innerHTML=""
 
     // tracks.forEach(track => {
-   
+   let song_cont=document
     let mainBox= document.createElement("div")
 
     let imgBox= document.createElement("div");
