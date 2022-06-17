@@ -26,7 +26,7 @@ let navBar =  function (){
         <button>Log in</button>
     </div>
     <div>
-        <button>Sign up</button>
+        <button id="userName" > </button>
     </div>
 </div>`;
 }

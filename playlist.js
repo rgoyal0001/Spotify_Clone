@@ -1,5 +1,4 @@
-let accessToken =
-  "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un";
+let accessToken =JSON.parse(localStorage.getItem("authToken"));
 
 async function getPlaylistdata(id) {
   try {

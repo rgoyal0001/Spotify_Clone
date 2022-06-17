@@ -1,8 +1,25 @@
+const clientId = "e358f27f1cf744e49b880aaf0807be8c";
+const clientSecret = "4204725dea5941b2a7c17ab60372d054";
+// let authToken;
+const _getToken = async () => {
+    const result = await fetch(`https://accounts.spotify.com/api/token`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ":" + clientSecret)
+        },
+        body: 'grant_type=client_credentials'
+    });
+
+    const data = await result.json();
+    // authToken=data.access_token
+        localStorage.setItem("authToken", JSON.stringify(data.access_token) )
+    console.log(data.access_token)
+}
+_getToken()
 
 
-let accessToken = "BQDnJiYxujxeVm4g5FRjaj-yuGqHEYzLkOwlyFdAnzgFpudt60ydnFICYhUrBC8-FTnycedft3KOuYeLft1-rUYapHTNAr02-XoPX7pPMTOl7jA4kMwffP8ogVldEFUdbet6hkKAytm_ZzDAZSiZKBFOOUdf4SgnJFyoHrIaaSAhKdkfIIiB87wJJaJd8fYZs7un"
-
-
+const accessToken= JSON.parse(localStorage.getItem("authToken"))
 let timerId;
         function debounce(fetchData,delay){
             if(timerId) clearTimeout(timerId);
