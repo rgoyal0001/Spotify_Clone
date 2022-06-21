@@ -40,8 +40,8 @@
     border-radius: 30px;
     border-color: none;
     margin: 12px;
-    top:-4px;
-    left: 120px;
+    top:-63px;
+    left: 380px;
     /* z-index: 1; */
 }
 body{
@@ -73,19 +73,6 @@ body{
 
 }
 
-/* // search bar */
-
-
-#inputSearch{
-    position: relative;
-    padding: 8px 78px 8px 30px;
-    border-radius: 30px;
-    border-color: none;
-    margin: 0%;
-    top:-50px;
-    left: 150px;
-    /* z-index: 1; */
-}
 
 
 #browseall {

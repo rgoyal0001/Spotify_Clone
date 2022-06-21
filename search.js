@@ -14,7 +14,7 @@ const _getToken = async () => {
     const data = await result.json();
     // authToken=data.access_token
         localStorage.setItem("authToken", JSON.stringify(data.access_token) )
-    console.log(data.access_token)
+  
 }
 _getToken()
 
