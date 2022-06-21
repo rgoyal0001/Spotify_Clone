@@ -3,11 +3,33 @@ import navBar from "../component/getNavbar.js"
 
 document.getElementById("up-bar").innerHTML = navBar();
 
-localStorage.setItem("authToken",JSON.stringify("BQBPWdYVSr_SZY0ExvR4xK7BSukLGDUiUDwlY2rqjtUlNxg2DFo6nVVY_xWgT3H9w4BqZuP6lGd6MvWAfiWMNKixjNTx1RFkhQcdIC-0REH9q9Z3F2xAG_59ToNaomhGbzG-SRv7-TdCsdxMIpmMC8pqCpQWq9ayuNA"))
 
-let authToken = JSON.parse(localStorage.getItem("authToken"));
+const clientId = "e358f27f1cf744e49b880aaf0807be8c";
+const clientSecret = "4204725dea5941b2a7c17ab60372d054";
 
-    let getCategroies = async function () {
+const _getToken = async () => {
+    const result = await fetch(`https://accounts.spotify.com/api/token`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ":" + clientSecret)
+        },
+        body: 'grant_type=client_credentials'
+    });
+
+    const data = await result.json();
+    localStorage.setItem("authToken",JSON.stringify(data.access_token))
+    getCategroies(data.access_token)
+    getGonre(data.access_token)
+}
+_getToken()
+
+    // 
+
+
+// let authToken = JSON.parse(localStorage.getItem("authToken"));
+
+    let getCategroies = async function (authToken) {
         try {
 
             //  categories = https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=10&offset=5
@@ -24,23 +46,22 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
             })
 
             let data = await res.json();
-            // console.log(data);
-            playlistsIds(data.categories.items);
+            playlistsIds(data.categories.items,authToken);
         } catch (error) {
             console.log(error);
         }
     }
-    getCategroies();
+    // getCategroies();
 
-    function playlistsIds(data) {
+    function playlistsIds(data,authToken) {
         data.forEach(categories => {
             let categorie = categories.id;
-            getPlaylist(categorie);
+            getPlaylist(categorie,authToken);
 
         });
     }
 
-    let getPlaylist = async function (categorie) {
+    let getPlaylist = async function (categorie,authToken) {
         try {
             
 
@@ -57,17 +78,18 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
             })
 
             let data = await res.json();
+            // console.log("playlist item === ",data.playlists.items)
             if (!data.error) {
                 // console.log(categorie)
                 // console.log(data);
                 appendData(data.playlists.items);
             }
         } catch (error) {
-            console.log(error);
+            console.log("get playlist err",error);
         }
     }
 
-    let getGonre = async function () {
+    let getGonre = async function (authToken) {
         try {
             let res = await fetch(`https://api.spotify.com/v1/recommendations/available-genre-seeds`, {
                 method: "GET",
@@ -79,15 +101,15 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
             })
 
             let data = await res.json();
-            // console.log(data);
+            // console.log( "genre Data", data);
             localStorage.setItem("genre", JSON.stringify(data.genres))
             // console.log(data.categories.items)
             // playlistsIds(data.categories.items);
         } catch (error) {
-            console.log(error);
+            console.log("Genere Error",error);
         }
     }
-    getGonre()
+    
     let genres = JSON.parse(localStorage.getItem("genre"));
     let i = 0;
 
@@ -163,6 +185,7 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
             
                 const playButton = document.createElement("button");
                 playButton.addEventListener('click', () => {
+                    getTracks(data.id)
                     console.log("playsong")
                 });
                 playButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>`;
@@ -239,7 +262,36 @@ let authToken = JSON.parse(localStorage.getItem("authToken"));
     //     getCategroies();
     // }
 
+    let getTracks = async function (playlistId) {
+    let authToken = JSON.parse(localStorage.getItem("authToken"));
 
+        console.log(playlistId,authToken)
+    try {
+        
+
+        //  categories = https://api.spotify.com/v1/browse/categories?country=IN&locale=sv_IN&limit=10&offset=5
+        //  genre = https://api.spotify.com/v1/recommendations/available-genre-seeds
+
+        let res = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?market=ES&limit=5&offset=5`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${authToken}`,
+            }
+
+        })
+
+        let data = await res.json();
+        localStorage.setItem("trackId", JSON.stringify(data.items[0].track.album.id))
+        console.log(JSON.parse(localStorage.getItem("trackId")))
+        console.log(data);
+        // location.reload();
+
+       
+    } catch (error) {
+        console.log("get playlist err",error);
+    }
+}
 
 
 
