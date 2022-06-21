@@ -1,6 +1,47 @@
+const clientId = "e358f27f1cf744e49b880aaf0807be8c";
+const clientSecret = "4204725dea5941b2a7c17ab60372d054";
+// let authToken;
+const _getToken = async () => {
+    const result = await fetch(`https://accounts.spotify.com/api/token`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ":" + clientSecret)
+        },
+        body: 'grant_type=client_credentials'
+    });
+
+    const data = await result.json();
+    // authToken=data.access_token
+        localStorage.setItem("authToken", JSON.stringify(data.access_token) )
+  
+}
+_getToken()
 
 
+<<<<<<< HEAD
 let accessToken = "BQAjZN12-uckMREECgP8CcKs9l97fVicNvKETyfQuuAFoJQ-gcola6Q9lIsDww-PHQFbq1wbuoxfHsXKxVZSWHIRAtMAfelLg9xUWS3bW8cJQTQFuBU8DTZBAAyvdWgbTtIIQjK7BRz-M_JnM8VPkeP1fFfTedWMkLM0NubHDYS6MQTNyqJ8MLx-TTC2DQxdFQZ7X5vjYzU8wRwk8baYYw"
+=======
+const accessToken= JSON.parse(localStorage.getItem("authToken"))
+    let timerId;
+        function debounce(fetchData,delay){
+            if(timerId) clearTimeout(timerId);
+        timerId=setTimeout(() => {
+            let input= document.querySelector("#inputSearch").value;
+    
+            fetchData(input);
+     
+        }, delay);
+        }
+    
+        function fetchData(input){
+            localStorage.setItem("searchInput",input);
+            
+
+            window.location.href="searchPage.html"
+        }
+
+>>>>>>> 2d7a6bd0ac2f02b6df5034e11551d9698d27cc37
 
 async function getdata(){
 try {
@@ -15,7 +56,7 @@ try {
             })
 
             let data = await res.json();
-            //console.log(data.categories.items);
+
             appendData(data.categories.items)
     
 } catch (error) {
@@ -26,6 +67,26 @@ try {
 }
 
 getdata()
+
+// search bar
+// let timerId;
+//         function debounce(storeInput,delay){
+//             if(timerId) clearTimeout(timerId);
+//         timerId=setTimeout(() => {
+//             let input= document.querySelector("#inputSearch").value;
+    
+//             storeInput(input);
+     
+//         }, delay);
+//         }
+    
+//         function storeInput(input){
+//             localStorage.setItem("searchInput",input);
+            
+
+//             window.location.href="searchPage.html"
+//         }
+
 
 function appendData(categories){
 
@@ -43,7 +104,7 @@ categories.forEach(element => {
     gridContainer.append(div)
 
     div.addEventListener("click", function(){
-        showPlaylist(element.id);
+        showPlaylist([element.id, element.name]);
     }, false);
 });
 
@@ -51,6 +112,7 @@ categories.forEach(element => {
 
 function showPlaylist(id){
     localStorage.setItem("catID",id)
-    window.location.href = "http://127.0.0.1:5500/playlist.html"
+    window.location.href = "playlist.html"
+
 }
 
