@@ -6,9 +6,14 @@ document.getElementById("up-bar").innerHTML = navBar();
 
 let locationHref = JSON.parse(localStorage.getItem("locationHref")) || [];
 let loactionAt = locationHref.length - 1;
-console.log(locationHref)
+// console.log(locationHref)
+console.log(1)
+let profile_name=localStorage.getItem("user_name")
+console.log(profile_name)
 
-
+        
+let button_text=document.getElementById("user_name")
+button_text.innerText=profile_name
 let forwardAt = JSON.parse(localStorage.getItem("forwardAt"));
 
 if(locationHref[forwardAt] == window.location.href ){

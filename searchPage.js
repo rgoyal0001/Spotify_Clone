@@ -1,5 +1,6 @@
 const clientId = "e358f27f1cf744e49b880aaf0807be8c";
 const clientSecret = "4204725dea5941b2a7c17ab60372d054";
+import navBar from "./component/getNavbar.js";
 // let authToken;
 const _getToken = async () => {
     const result = await fetch(`https://accounts.spotify.com/api/token`, {
@@ -17,8 +18,14 @@ const _getToken = async () => {
   
 }
 
+// user_name
+document.getElementById("up-bar").innerHTML=navBar()
 
+let profile_name=localStorage.getItem("user_name")
 
+        
+let button_text=document.getElementById("user_name")
+button_text.innerText=profile_name
 
 let timerId;
 function debounce(fetchData, delay) {
