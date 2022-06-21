@@ -10,6 +10,28 @@
       "user_DOBday": "29",
       "user_gender": "Male",
       "id": 1
+    },
+    {
+      "user_email": "rajesh@gmail.com",
+      "user_conform_email": "rajesh@gmail.com",
+      "user_password": "1234",
+      "user_profilename": "raj",
+      "uer_DOByear": "2001",
+      "user_DOBmonth": "February",
+      "user_DOBday": "23",
+      "user_gender": "Male",
+      "id": 2
+    },
+    {
+      "user_email": "rajesh@gmail.com",
+      "user_conform_email": "rajesh@gmail.com",
+      "user_password": "1324",
+      "user_profilename": "rajes",
+      "uer_DOByear": "2001",
+      "user_DOBmonth": "September",
+      "user_DOBday": "56",
+      "user_gender": "Male",
+      "id": 3
     }
   ],
   "playlist": [

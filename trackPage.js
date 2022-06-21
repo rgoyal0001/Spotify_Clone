@@ -20,7 +20,7 @@ async function fetchTrackData(){
 
         let data= await res.json();
         
-       
+       console.log(data);
         const albumInfo=JSON.parse(localStorage.getItem("albumInfo"));
         displayAlbumInfo(albumInfo)
 
