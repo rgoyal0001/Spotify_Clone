@@ -23,12 +23,10 @@ let navBar =  function (){
 </div>
 <div id="sign-in">
     <div id="log-in">
-        <button>Log in</button>
+        <button id="user_name"></button>
     </div>
-    <div>
-        <button>Sign up</button>
-    </div>
-</div>`;
+    
+</>`;
 }
 
 export default navBar;

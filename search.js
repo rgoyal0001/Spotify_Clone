@@ -19,9 +19,6 @@ const _getToken = async () => {
 _getToken()
 
 
-<<<<<<< HEAD
-let accessToken = "BQAjZN12-uckMREECgP8CcKs9l97fVicNvKETyfQuuAFoJQ-gcola6Q9lIsDww-PHQFbq1wbuoxfHsXKxVZSWHIRAtMAfelLg9xUWS3bW8cJQTQFuBU8DTZBAAyvdWgbTtIIQjK7BRz-M_JnM8VPkeP1fFfTedWMkLM0NubHDYS6MQTNyqJ8MLx-TTC2DQxdFQZ7X5vjYzU8wRwk8baYYw"
-=======
 const accessToken= JSON.parse(localStorage.getItem("authToken"))
     let timerId;
         function debounce(fetchData,delay){
@@ -41,7 +38,6 @@ const accessToken= JSON.parse(localStorage.getItem("authToken"))
             window.location.href="searchPage.html"
         }
 
->>>>>>> 2d7a6bd0ac2f02b6df5034e11551d9698d27cc37
 
 async function getdata(){
 try {

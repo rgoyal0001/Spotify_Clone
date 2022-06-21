@@ -23,8 +23,13 @@ document.getElementById("leftArrow").addEventListener("click", goBack);
 
 document.getElementById("rightArrow").addEventListener("click", goForward);
 
+console.log(1)
 
+let profile_name=localStorage.getItem("user_name")
 
+        
+let button_text=document.getElementById("user_name")
+button_text.innerText=profile_name
 function goBack() {
   
     if(backAt >= 1){
